@@ -21,11 +21,6 @@ if (script === '-v' || script === '--version') {
   process.exit(0);
 }
 
-if (!script) {
-  console.error(chalk.red('✘ App name should be specified'));
-  process.exit(1);
-}
-
 if (script) {
   mkdirp.sync(script);
   process.chdir(script);

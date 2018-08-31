@@ -26,8 +26,10 @@ if (!script) {
   process.exit(1);
 }
 
-mkdirp.sync(script);
-process.chdir(script);
+if (script) {
+  mkdirp.sync(script);
+  process.chdir(script);
+}
 
 const BasicGenerator = require('../lib/BasicGenerator');
 const generator = new BasicGenerator(process.argv.slice(2), {
@@ -38,7 +40,9 @@ const generator = new BasicGenerator(process.argv.slice(2), {
   resolved: __dirname,
 });
 generator.run(() => {
-  clipboardy.writeSync(`cd ${script}`);
-  console.log('📋  Copied to clipboard, just use Ctrl+V');
+  if (script) {
+    clipboardy.writeSync(`cd ${script}`);
+    console.log('📋  Copied to clipboard, just use Ctrl+V');
+  }
   console.log('✨  File Generate Done');
 });

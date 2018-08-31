@@ -1,7 +1,7 @@
 {
   "name": "create-umi",
   "version": "0.0.1",
-  "description": "Cli tool for creating umi app and plugins.",
+  "description": "Creates a UmiJS application using the command line.",
   "bin": {
     "create-umi": "./bin/cli.js"
   },
@@ -10,5 +10,17 @@
     "debug": "^3.1.0",
     "semver": "^5.5.1",
     "yeoman-generator": "^3.1.1"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/umijs/create-umi"
+  },
+  "homepage": "https://github.com/umijs/create-umi",
+  "authors": [
+    "chencheng <sorrycc@gmail.com> (https://github.com/sorrycc)"
+  ],
+  "bugs": {
+    "url": "https://github.com/umijs/create-umi/issues"
   }
 }

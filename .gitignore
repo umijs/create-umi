@@ -7,3 +7,5 @@
 /templates/**/.umi
 /templates/**/.umi-production
 /templates/**/dist
+/.idea
+/yarn.lock

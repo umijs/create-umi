@@ -1,0 +1,14 @@
+{
+  "name": "create-umi",
+  "version": "0.0.1",
+  "description": "Cli tool for creating umi app and plugins.",
+  "bin": {
+    "create-umi": "./bin/cli.js"
+  },
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "debug": "^3.1.0",
+    "semver": "^5.5.1",
+    "yeoman-generator": "^3.1.1"
+  }
+}

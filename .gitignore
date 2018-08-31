@@ -1,0 +1,9 @@
+/node_modules
+/templates/**/node_modules
+/templates/**/npm-debug.log*
+/templates/**/yarn-error.log
+/templates/**/yarn.lock
+/templates/**/package-lock.json
+/templates/**/.umi
+/templates/**/.umi-production
+/templates/**/dist

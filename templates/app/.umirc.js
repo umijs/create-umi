@@ -9,7 +9,6 @@ export default {
       dynamicImport: <% if (props.react.includes('dynamicImport')) { %>true<% } else { %>false<% } %>,
       title: '<%= name %>',
       dll: <% if (props.react.includes('dll')) { %>true<% } else { %>false<% } %>,
-      pwa: <% if (props.react.includes('pwa')) { %>true<% } else { %>false<% } %>,
       routes: {
         exclude: [],
       },

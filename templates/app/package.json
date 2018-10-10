@@ -1,7 +1,4 @@
 {
-  <%_ if (props.react.includes('pwa')) { _%>
-  "name": "<%- name %>",
-  <%_ } _%>
   "private": true,
   "scripts": {
     "start": "umi dev",

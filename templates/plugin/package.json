@@ -1,0 +1,37 @@
+{
+  "name": "umi-plugin-<%= props.name %>",
+  "version": "0.1.6",
+  "description": "<%= props.description %>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/<%= props.org %>/umi-plugin-<%= props.name %>"
+  },
+  "homepage": "https://github.com/<%= props.org %>/umi-plugin-<%= props.name %>",
+  "authors": [
+    "chencheng <sorrycc@gmail.com> (https://github.com/sorrycc)"
+  ],
+  "bugs": {
+    "url": "https://github.com/<%= props.org %>/umi-plugin-<%= props.name %>/issues"
+  },
+  "peerDependencies": {
+    "umi": "2.x"
+  },
+  <% if (props.useBabel) { %>
+  "main":  "lib/index.js",
+  "scripts": {
+    "build":  "umi-tools build"
+  },
+  "devDependencies": {
+    "umi-tools":  "*"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  <% } else { %>
+  "files": [
+    "index.js"
+  ]
+  <% } %>
+}

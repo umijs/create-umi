@@ -11,6 +11,7 @@
     "debug": "^3.1.0",
     "mkdirp": "^0.5.1",
     "semver": "^5.5.1",
+    "yargs-parser": "^11.0.0",
     "yeoman-generator": "^3.1.1"
   },
   "license": "MIT",

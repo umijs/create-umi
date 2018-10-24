@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+const yParser = require('yargs-parser');
 const { existsSync } = require('fs');
 const { join } = require('path');
 const semver = require('semver');
@@ -12,8 +13,8 @@ if (!semver.satisfies(process.version, '>= 8.0.0')) {
   process.exit(1);
 }
 
-const script = process.argv[2];
-if (script === '-v' || script === '--version') {
+const args = yParser(process.argv.slice(2));
+if (args.v || args.version) {
   console.log(require('../package').version);
   if (existsSync(join(__dirname, '../.local'))) {
     console.log(chalk.cyan('@local'));
@@ -21,13 +22,13 @@ if (script === '-v' || script === '--version') {
   process.exit(0);
 }
 
-if (script) {
-  mkdirp.sync(script);
-  process.chdir(script);
+if (args._.length) {
+  mkdirp.sync(args._[0]);
+  process.chdir(args._[0]);
 }
 
-const BasicGenerator = require('../lib/BasicGenerator');
-const generator = new BasicGenerator(process.argv.slice(2), {
+const Generator = args.plugin ? require('../lib/PluginGenerator') : require('../lib/AppGenerator');
+const generator = new Generator(process.argv.slice(2), {
   name: 'basic',
   env: {
     cwd: process.cwd(),
@@ -35,8 +36,8 @@ const generator = new BasicGenerator(process.argv.slice(2), {
   resolved: __dirname,
 });
 generator.run(() => {
-  if (script) {
-    clipboardy.writeSync(`cd ${script}`);
+  if (args._[0]) {
+    clipboardy.writeSync(`cd ${args._[0]}`);
     console.log('📋  Copied to clipboard, just use Ctrl+V');
   }
   console.log('✨  File Generate Done');

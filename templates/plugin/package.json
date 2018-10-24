@@ -20,7 +20,8 @@
   <% if (props.useBabel) { %>
   "main":  "lib/index.js",
   "scripts": {
-    "build":  "umi-tools build"
+    "build":  "umi-tools build",
+    "publish": "npm run build && npm publish"
   },
   "devDependencies": {
     "umi-tools":  "*"

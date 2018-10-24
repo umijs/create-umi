@@ -15,5 +15,3 @@ $ yarn create umi <appName> [Options]
 ## LICENSE
 
 MIT
-
-

@@ -1,2 +1,2 @@
 # Ignore built files
-build/*
+dist/*

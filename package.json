@@ -5,6 +5,9 @@
   "bin": {
     "create-umi": "./bin/cli.js"
   },
+  "scripts": {
+    "prepublish": "np --no-cleanup --yolo --no-publish"
+  },
   "dependencies": {
     "chalk": "^2.4.1",
     "clipboardy": "^1.2.3",
@@ -13,6 +16,9 @@
     "semver": "^5.5.1",
     "yargs-parser": "^11.0.0",
     "yeoman-generator": "^3.1.1"
+  },
+  "devDependencies": {
+    "np": "^3.0.4"
   },
   "license": "MIT",
   "repository": {

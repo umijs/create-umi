@@ -6,7 +6,7 @@
     "create-umi": "./bin/cli.js"
   },
   "scripts": {
-    "prepublish": "np --no-cleanup --yolo --no-publish"
+    "prepublishOnly": "np --no-cleanup --yolo --no-publish"
   },
   "dependencies": {
     "chalk": "^2.4.1",

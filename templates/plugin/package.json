@@ -21,16 +21,23 @@
   "main":  "lib/index.js",
   "scripts": {
     "build":  "umi-tools build",
-    "publish": "npm run build && npm publish"
+    "prepublish": "npm run build && np --no-cleanup --yolo --no-publish"
   },
   "devDependencies": {
-    "umi-tools":  "*"
+    "umi-tools":  "*",
+    "np": "^3.0.4"
   },
   "files": [
     "lib",
     "src"
   ]
   <% } else { %>
+  "scripts": {
+    "prepublish": "np --no-cleanup --yolo --no-publish"
+  },
+  "devDependencies": {
+    "np": "^3.0.4"
+  },
   "files": [
     "index.js"
   ]

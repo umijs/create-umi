@@ -27,7 +27,14 @@ if (args._.length) {
   process.chdir(args._[0]);
 }
 
-const Generator = args.plugin ? require('../lib/PluginGenerator') : require('../lib/AppGenerator');
+let Generator;
+if (args.plugin) {
+  Generator = require('../lib/PluginGenerator');
+} else if (args.block) {
+  Generator = require('../lib/BlockGenerator');
+} else {
+  Generator = require('../lib/AppGenerator');
+};
 const generator = new Generator(process.argv.slice(2), {
   name: 'basic',
   env: {

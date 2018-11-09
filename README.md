@@ -11,6 +11,7 @@ $ yarn create umi <appName> [Options]
 ## Options
 
 * `plugin`, create umi plugin
+* `block`, create umi block
 
 ## LICENSE
 

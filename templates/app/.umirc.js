@@ -13,6 +13,11 @@ export default {
         exclude: [],
       },
       hardSource: <% if (props.react.includes('hardSource')) { %>true<% } else { %>false<% } %>,
+      routes: {
+        exclude: [
+          /components/,
+        ],
+      },
     }],
   ],
 }

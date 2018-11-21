@@ -41,6 +41,7 @@ const generator = new Generator(process.argv.slice(2), {
     cwd: process.cwd(),
   },
   resolved: __dirname,
+  isTypeScript: args.ts || args.typescript
 });
 generator.run(() => {
   if (args._[0]) {

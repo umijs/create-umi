@@ -1,9 +1,5 @@
 {
   "private": true,
-  "dependencies": {
-    "umi": "2.2.7",
-    "umi-plugin-react": "^1.2.3"
-  },
   "scripts": {
     "start": "umi dev",
     "build": "umi build",
@@ -14,6 +10,8 @@
     "@types/node": "^10.12.9",
     "@types/react": "^16.7.6",
     "@types/react-dom": "^16.0.9",
-    "typescript": "^3.1.6"
+    "typescript": "^3.1.6",
+    "umi": "2.2.7",
+    "umi-plugin-react": "^1.2.3"
   }
 }

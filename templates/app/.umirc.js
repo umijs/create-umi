@@ -15,7 +15,12 @@ export default {
       hardSource: <% if (props.react.includes('hardSource')) { %>true<% } else { %>false<% } %>,
       routes: {
         exclude: [
-          /components/,
+          /model\.(j|t)sx?$/,
+          /\.test\.(j|t)sx?$/,
+          /service\.(j|t)sx?$/,
+          /models\//,
+          /components\//,
+          /services\//,
         ],
       },
     }],

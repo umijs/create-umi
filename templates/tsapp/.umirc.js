@@ -1,3 +1,4 @@
+
 // ref: https://umijs.org/config/
 export default {
   plugins: [
@@ -9,19 +10,17 @@ export default {
       title: '<%= name %>',
       dll: <% if (props.react.includes('dll')) { %>true<% } else { %>false<% } %>,
       routes: {
+        exclude: [],
+      },
+      hardSource: <% if (props.react.includes('hardSource')) { %>true<% } else { %>false<% } %>,
+      routes: {
         exclude: [
           /model\.(j|t)sx?$/,
           /\.test\.(j|t)sx?$/,
           /service\.(j|t)sx?$/,
           /models\//,
           /components\//,
-          /services\//
-        ],
-      },
-      hardSource: <% if (props.react.includes('hardSource')) { %>true<% } else { %>false<% } %>,
-      routes: {
-        exclude: [
-          /components/,
+          /services\//,
         ],
       },
     }],

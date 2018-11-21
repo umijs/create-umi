@@ -18,14 +18,13 @@
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": true,
     "experimentalDecorators": true,
-    "noUnusedLocals": true,
+    "noUnusedLocals": true
   },
   "exclude": [
     "node_modules",
     "dist",
     "scripts",
     "jest",
-    "*.js",
-    "config/**/*.js"
+    "*.js"
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "name": "@umi-material/<%= props.name %>",
+  "name": "@umi-block/<%= props.name %>",
   "version": "0.0.1",
   "description": "<%= props.description %>",
   "main": "src/index.js",

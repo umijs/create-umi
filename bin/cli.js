@@ -46,7 +46,10 @@ if (args.plugin) {
     debug(`answer, type: ${answers.type}`);
     switch (answers.type) {
       case 'ant-design-pro':
-        cloneAntdPro();
+        cloneAntdPro()
+          .catch(e => {
+            console.log(`Clone failed: ${e}`);
+          });
         break;
       case 'project':
         runGenerator(require('../lib/AppGenerator'));
@@ -86,7 +89,14 @@ function runGenerator(Generator) {
   });
 }
 
-function cloneAntdPro() {
+async function cloneAntdPro() {
   console.log(`git clone https://github.com/umijs/ant-design-pro ${args._[0] || './'}`);
-  require('execa').stdout(`git`, [`clone`, `https://github.com/umijs/ant-design-pro`, args._[0] || './']);
+  await require('execa')(
+    `git`,
+    [
+      `clone`,
+      `https://github.com/umijs/ant-design-pro`,
+      args._[0] || './',
+    ],
+  );
 }

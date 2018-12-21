@@ -9,9 +9,6 @@ export default {
       dynamicImport: <% if (props.react.includes('dynamicImport')) { %>true<% } else { %>false<% } %>,
       title: '<%= name %>',
       dll: <% if (props.react.includes('dll')) { %>true<% } else { %>false<% } %>,
-      routes: {
-        exclude: [],
-      },
       hardSource: <% if (props.react.includes('hardSource')) { %>true<% } else { %>false<% } %>,
       routes: {
         exclude: [

@@ -96,7 +96,7 @@ async function cloneAntdPro() {
     [
       `clone`,
       `https://github.com/umijs/ant-design-pro`,
-      `--depth=1`
+      `--depth=1`,
       args._[0] || './',
     ],
   );

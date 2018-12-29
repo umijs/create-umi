@@ -90,12 +90,13 @@ function runGenerator(Generator) {
 }
 
 async function cloneAntdPro() {
-  console.log(`git clone https://github.com/umijs/ant-design-pro ${args._[0] || './'}`);
+  console.log(`git clone https://github.com/umijs/ant-design-pro --depth=1 ${args._[0] || './'}`);
   await require('execa')(
     `git`,
     [
       `clone`,
       `https://github.com/umijs/ant-design-pro`,
+      `--depth=1`
       args._[0] || './',
     ],
   );

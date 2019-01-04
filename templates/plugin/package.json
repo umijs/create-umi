@@ -2,18 +2,11 @@
   "name": "umi-plugin-<%= props.name %>",
   "version": "0.0.1",
   "description": "<%= props.description %>",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/<%= props.org %>/umi-plugin-<%= props.name %>"
+  "authors": {
+    "name": "<%= props.author %>",
+    "email": "<%= props.mail %>"
   },
-  "homepage": "https://github.com/<%= props.org %>/umi-plugin-<%= props.name %>",
-  "authors": [
-    "<%= props.author %> <<%= props.mail %>>"
-  ],
-  "bugs": {
-    "url": "https://github.com/<%= props.org %>/umi-plugin-<%= props.name %>/issues"
-  },
+  "repository": "<%= props.repo %>/<%= props.name %>",
   "peerDependencies": {
     "umi": "2.x"
   },
@@ -40,6 +33,7 @@
   },
   "files": [
     "index.js"
-  ]
+  ],
   <% } %>
+  "license": "MIT"
 }

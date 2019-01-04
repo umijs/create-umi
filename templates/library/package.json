@@ -1,22 +1,22 @@
 {
-  "name": "@umi-block/<%= props.name %>",
+  "name": "<%= props.name %>",
   "version": "0.0.1",
   "description": "<%= props.description %>",
-  "main": "src/index.js",
+  "main": "dist/<%= props.name %>.js",
+  "module": "dist/<%= props.name %>.esm.js",
+  "unpkg": "dist/<%= props.name %>.umd.js",
   "authors": {
     "name": "<%= props.author %>",
     "email": "<%= props.mail %>"
   },
   "repository": "<%= props.repo %>/<%= props.name %>",
   "scripts": {
-    "dev": "umi dev"
-  },
-  "dependencies": {
-    "react": ">=16.0.0"
+    "dev": "umi doc dev",
+    "build": "umi lib build"
   },
   "devDependencies": {
     "umi": "^2.0.0",
-    "umi-plugin-block-dev": "^1.0.0"
+    "umi-plugin-library": "^1.0.0"
   },
   "license": "MIT"
 }

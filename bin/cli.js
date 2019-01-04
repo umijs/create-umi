@@ -38,6 +38,7 @@ if (args.plugin) {
       choices: [
         'project',
         'ant-design-pro',
+        'library',
         'plugin',
         'block',
       ],
@@ -56,6 +57,9 @@ if (args.plugin) {
         break;
       case 'plugin':
         runGenerator(require('../lib/PluginGenerator'));
+        break;
+      case 'library':
+        runGenerator(require('../lib/LibraryGenerator'));
         break;
       case 'block':
         runGenerator(require('../lib/BlockGenerator'));

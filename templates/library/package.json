@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "umi": "^2.0.0",
-    "umi-plugin-library": "^1.0.0-0"
+    "umi-plugin-library": "^1.0.1-0"
   },
   "license": "MIT"
 }

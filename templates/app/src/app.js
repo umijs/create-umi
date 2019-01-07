@@ -1,5 +1,4 @@
-
-<% if (props.react.includes('dva')) { %>
+<% if (props.react.includes('dva')) { -%>
 export const dva = {
   config: {
     onError(err) {

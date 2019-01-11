@@ -1,13 +1,13 @@
 {
-  "name": "@umi-block/<%= props.name %>",
+  "name": "@umi-block/<%= name %>",
   "version": "0.0.1",
-  "description": "<%= props.description %>",
+  "description": "<%= description %>",
   "main": "src/index.js",
   "authors": {
-    "name": "<%= props.author %>",
-    "email": "<%= props.mail %>"
+    "name": "<%= author %>",
+    "email": "<%= mail %>"
   },
-  "repository": "<%= props.repo %>/<%= props.name %>",
+  "repository": "<%= repo %>/<%= name %>",
   "scripts": {
     "dev": "umi dev"
   },

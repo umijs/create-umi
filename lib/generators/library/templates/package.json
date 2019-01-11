@@ -1,0 +1,22 @@
+{
+  "name": "<%= name %>",
+  "version": "0.0.1",
+  "description": "<%= description %>",
+  "main": "dist/<%= name %>.js",
+  "module": "dist/<%= name %>.esm.js",
+  "unpkg": "dist/<%= name %>.umd.js",
+  "authors": {
+    "name": "<%= author %>",
+    "email": "<%= mail %>"
+  },
+  "repository": "<%= repo %>/<%= name %>",
+  "scripts": {
+    "dev": "umi doc dev",
+    "build": "umi lib build"
+  },
+  "devDependencies": {
+    "umi": "^2.0.0",
+    "umi-plugin-library": "^1.0.1-0"
+  },
+  "license": "MIT"
+}

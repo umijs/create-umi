@@ -1,16 +1,16 @@
 {
-  "name": "umi-plugin-<%= props.name %>",
+  "name": "umi-plugin-<%= name %>",
   "version": "0.0.1",
-  "description": "<%= props.description %>",
+  "description": "<%= description %>",
   "authors": {
-    "name": "<%= props.author %>",
-    "email": "<%= props.mail %>"
+    "name": "<%= author %>",
+    "email": "<%= mail %>"
   },
-  "repository": "<%= props.repo %>/<%= props.name %>",
+  "repository": "<%= org %>/<%= name %>",
   "peerDependencies": {
     "umi": "2.x"
   },
-  <% if (props.useBabel) { %>
+  <% if (useBabel) { %>
   "main":  "lib/index.js",
   "scripts": {
     "build":  "umi-tools build",

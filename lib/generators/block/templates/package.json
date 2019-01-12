@@ -1,0 +1,22 @@
+{
+  "name": "@umi-block/<%= name %>",
+  "version": "0.0.1",
+  "description": "<%= description %>",
+  "main": "src/index.js",
+  "authors": {
+    "name": "<%= author %>",
+    "email": "<%= mail %>"
+  },
+  "repository": "<%= repo %>/<%= name %>",
+  "scripts": {
+    "dev": "umi dev"
+  },
+  "dependencies": {
+    "react": ">=16.0.0"
+  },
+  "devDependencies": {
+    "umi": "^2.0.0",
+    "umi-plugin-block-dev": "^1.0.0"
+  },
+  "license": "MIT"
+}

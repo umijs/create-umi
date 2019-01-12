@@ -3,7 +3,7 @@
   "version": "0.9.1",
   "description": "Creates a UmiJS application using the command line.",
   "bin": {
-    "create-umi": "./bin/cli.js"
+    "create-umi": "cli.js"
   },
   "scripts": {
     "prepublishOnly": "np --no-cleanup --yolo --no-publish"

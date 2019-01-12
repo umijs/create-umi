@@ -19,7 +19,7 @@ if (!semver.satisfies(process.version, '>= 8.0.0')) {
 const args = yParser(process.argv.slice(2));
 if (args.v || args.version) {
   console.log(require('../package').version);
-  if (existsSync(join(__dirname, '../.local'))) {
+  if (existsSync(join(__dirname, '.local'))) {
     console.log(chalk.cyan('@local'));
   }
   process.exit(0);
@@ -51,11 +51,18 @@ inquirer.prompt([
 });
 
 function runGenerator(generatorPath) {
+  let cwd = process.cwd();
+
+  if (args._.length) {
+    mkdirp.sync(args._[0]);
+    cwd = join(cwd, args._[0]);
+  }
+
   const Generator = require(generatorPath);
   const generator = new Generator(process.argv.slice(2), {
     name: '_',
     env: {
-      cwd: process.cwd(),
+      cwd,
     },
     resolved: require.resolve(generatorPath),
   });

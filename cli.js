@@ -8,7 +8,6 @@ const chalk = require('chalk');
 const mkdirp = require('mkdirp');
 const inquirer = require('inquirer');
 const clipboardy = require('clipboardy');
-const debug = require('debug')('create-umi:cli');
 
 if (!semver.satisfies(process.version, '>= 8.0.0')) {
   console.error(chalk.red('✘ The generator will only work with Node v8.0.0 and up!'));
@@ -18,7 +17,7 @@ if (!semver.satisfies(process.version, '>= 8.0.0')) {
 // print version and @local
 const args = yParser(process.argv.slice(2));
 if (args.v || args.version) {
-  console.log(require('../package').version);
+  console.log(require('./package').version);
   if (existsSync(join(__dirname, '.local'))) {
     console.log(chalk.cyan('@local'));
   }

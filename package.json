@@ -35,8 +35,7 @@
     "url": "https://github.com/umijs/create-umi/issues"
   },
   "files": [
-    "bin",
-    "lib",
-    "templates"
+    "cli.js",
+    "lib"
   ]
 }

@@ -10,11 +10,11 @@ $ yarn create umi <appName>
 
 ## Supported boilerplates
 
-* ant-design-pro  - Create project with an layout-only ant-design-pro boilerplate, use together with umi block.
-* app             - Create project with a simple boilerplate, support typescript.
-* block           - Create a umi block.
-* library         - Create a library with umi.
-* plugin          - Create a umi plugin.
+* `ant-design-pro` - Create project with an layout-only ant-design-pro boilerplate, use together with umi block.
+* `app           ` - Create project with a simple boilerplate, support typescript.
+* `block         ` - Create a umi block.
+* `library       ` - Create a library with umi.
+* `plugin        ` - Create a umi plugin.
 
 ## Example
 

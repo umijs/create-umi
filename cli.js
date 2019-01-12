@@ -26,7 +26,14 @@ if (args.v || args.version) {
 }
 
 const generators = readdirSync(`${__dirname}/lib/generators`)
-  .filter(f => !f.startsWith('.'));
+  .filter(f => !f.startsWith('.'))
+  .map(f => {
+    return {
+      name: `${f.padEnd(15)} - ${chalk.gray(require(`./lib/generators/${f}/meta.json`).description)}`,
+      value: f,
+    };
+  });
+
 inquirer.prompt([
   {
     name: 'type',

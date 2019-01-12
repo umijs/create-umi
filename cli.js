@@ -31,6 +31,7 @@ const generators = readdirSync(`${__dirname}/lib/generators`)
     return {
       name: `${f.padEnd(15)} - ${chalk.gray(require(`./lib/generators/${f}/meta.json`).description)}`,
       value: f,
+      short: f,
     };
   });
 

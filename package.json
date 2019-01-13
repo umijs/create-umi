@@ -6,7 +6,7 @@
     "create-umi": "cli.js"
   },
   "scripts": {
-    "changelog": "git changelog CHANGELOG.md && git commit -am 'update CHANGELOG.md'",
+    "changelog": "git changelog CHANGELOG.md && git add ./ && git commit -m 'update CHANGELOG.md'",
     "prepublishOnly": "npm run changelog && np --no-cleanup --yolo --no-publish"
   },
   "dependencies": {

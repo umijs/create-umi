@@ -6,7 +6,8 @@
     "create-umi": "cli.js"
   },
   "scripts": {
-    "prepublishOnly": "np --no-cleanup --yolo --no-publish"
+    "changelog": "git changelog CHANGELOG.md && git commit -am 'update CHANGELOG.md'",
+    "prepublishOnly": "npm run changelog && np --no-cleanup --yolo --no-publish"
   },
   "dependencies": {
     "chalk": "^2.4.1",

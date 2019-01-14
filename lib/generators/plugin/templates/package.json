@@ -23,7 +23,7 @@
   "files": [
     "lib",
     "src"
-  ]
+  ],
   <% } else { %>
   "scripts": {
     "prepublishOnly": "np --no-cleanup --yolo --no-publish"

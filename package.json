@@ -1,6 +1,6 @@
 {
   "name": "create-umi",
-  "version": "0.9.4",
+  "version": "0.9.5",
   "description": "Creates a UmiJS application using the command line.",
   "bin": {
     "create-umi": "cli.js"

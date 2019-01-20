@@ -1,6 +1,6 @@
 {
   "name": "<%= name %>",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "<%= description %>",
   "main": "dist/<%= name %>.js",
   "module": "dist/<%= name %>.esm.js",
@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "umi": "^2.0.0",
-    "umi-plugin-library": "^1.0.1-0"
+    "umi-plugin-library": "^1.0.1-alpha.1"
   },
   "license": "MIT"
 }

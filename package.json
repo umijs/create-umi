@@ -6,8 +6,7 @@
     "create-umi": "cli.js"
   },
   "scripts": {
-    "changelog": "git changelog CHANGELOG.md && git add ./ && git commit -m 'update CHANGELOG.md'",
-    "prepublishOnly": "npm run changelog && np --no-cleanup --yolo --no-publish"
+    "prepublishOnly": "np --no-cleanup --yolo --no-publish"
   },
   "dependencies": {
     "chalk": "^2.4.1",
@@ -21,7 +20,7 @@
     "yeoman-generator": "^3.1.1"
   },
   "devDependencies": {
-    "np": "^3.0.4"
+    "np": "^4.0.2"
   },
   "license": "MIT",
   "repository": {

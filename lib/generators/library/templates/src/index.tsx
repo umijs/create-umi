@@ -1,11 +1,11 @@
 import React from 'react';
 import styles from './index.css';
 
-export interface IButtonProps {
+export interface ButtonProps {
   size?: 'large' | 'default';
 }
 
-const Button: React.FC<IButtonProps> = function(props) {
+const Button: React.FC<ButtonProps> = function(props) {
   return (
     <button
       className={styles.button}

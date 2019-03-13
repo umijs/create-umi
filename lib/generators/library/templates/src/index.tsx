@@ -5,7 +5,7 @@ export interface IButtonProps {
   size?: 'large' | 'default';
 }
 
-const Button: React.FunctionComponent<IButtonProps> = function(props) {
+const Button: React.FC<IButtonProps> = function(props) {
   return (
     <button
       className={styles.button}

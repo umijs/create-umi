@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './index.css';
 
-export type BasicLayoutComponent<P> = React.SFC<P>;
+export type BasicLayoutComponent<P> = React.FunctionComponent<P>;
 
 export interface BasicLayoutProps extends React.Props<any> {
   history?: History;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './index.css';
 
-const Block: React.SFC = () => {
+const Block: React.FunctionComponent = () => {
   return (
     <div className={styles.normal}>
       <h1>I am a umi block!</h1>

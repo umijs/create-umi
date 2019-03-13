@@ -18,10 +18,10 @@
   },
   "devDependencies": {
     <% if (isTypeScript) { %>
-    "umi-library": "^1.0.0",
+    "umi-library": "^1.1.1",
     "typescript": "^3.3.3"
     <% } else { %>
-    "umi-library": "^1.0.0"
+    "umi-library": "^1.1.1"
     <% } %>
     },
   "license": "MIT"

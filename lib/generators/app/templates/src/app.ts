@@ -1,7 +1,7 @@
 
 export const dva = {
   config: {
-    onError(err) {
+    onError(err: ErrorEvent) {
       err.preventDefault();
       console.error(err.message);
     },

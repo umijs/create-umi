@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './index.css';
 
-export interface BasicLayoutProps {
+interface BasicLayoutProps {
   history?: History;
   location?: Location;
 }

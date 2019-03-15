@@ -5,10 +5,10 @@ Creates a UmiJS application/plugin/block/library using the command line.
 ## Usage
 
 ```bash
-$ yarn create umi <appName>
+$ yarn create umi [appName]
 ```
 
-## Supported boilerplates
+## Boilerplates
 
 * `ant-design-pro` - Create project with an layout-only ant-design-pro boilerplate, use together with umi block.
 * `app ` - Create project with a simple boilerplate, support typescript.
@@ -16,7 +16,7 @@ $ yarn create umi <appName>
 * `library ` - Create a library with umi.
 * `plugin ` - Create a umi plugin.
 
-## Example
+## Usage Example
 
 ```bash
 $ yarn create umi
@@ -55,6 +55,32 @@ $ yarn create umi
   create abc/typings.d.ts
  📋  Copied to clipboard, just use Ctrl+V
  ✨  File Generate Done
+```
+
+## FAQ
+
+### `yarn create umi` command failed
+
+这个问题基本上都是因为没有添加 yarn global module 的路径到 PATH 环境变量引起的。
+
+先执行 `yarn global bin` 拿到路径，然后添加到 PATH 环境变量里。
+
+```bash
+$ yarn global bin
+/usr/local/bin
+```
+
+你也可以尝试用 npm，
+
+```bash
+$ npm create umi
+```
+
+或者手动安装 create-umi，并执行他，
+
+```bash
+$ npm install create-umi -g
+$ create-umi
 ```
 
 ## LICENSE

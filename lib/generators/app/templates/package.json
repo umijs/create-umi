@@ -48,7 +48,7 @@
     "umi-plugin-react": "^1.6.0",
     "umi-types": "^0.2.0"
     <% } else { %>
-    "umi": "^2.6.1",
+    "umi": "^2.6.3",
     "umi-plugin-react": "^1.6.0"
     <% } %>
     },

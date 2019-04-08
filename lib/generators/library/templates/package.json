@@ -18,9 +18,11 @@
   },
   "devDependencies": {
     <% if (isTypeScript) { %>
+    "docz": "^0.13.7",
     "umi-library": "^1.1.1",
     "typescript": "^3.3.3"
     <% } else { %>
+    "docz": "^0.13.7",
     "umi-library": "^1.1.1"
     <% } %>
     },

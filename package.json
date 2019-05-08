@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "chalk": "^2.4.1",
-    "clipboardy": "^1.2.3",
+    "clipboardy": "^2.0.0",
     "debug": "^3.1.0",
     "execa": "^1.0.0",
     "inquirer": "^6.2.1",

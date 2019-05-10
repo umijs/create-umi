@@ -6,7 +6,8 @@
     "create-umi": "cli.js"
   },
   "scripts": {
-    "prepublishOnly": "np --no-cleanup --yolo --no-publish"
+    "prepublishOnly": "np --no-cleanup --yolo --no-publish",
+    "prettier": "prettier -c --write '**/*'"
   },
   "dependencies": {
     "chalk": "^2.4.1",
@@ -20,7 +21,8 @@
     "yeoman-generator": "^3.1.1"
   },
   "devDependencies": {
-    "np": "^5.0.1"
+    "np": "^5.0.1",
+    "prettier": "^1.17.0"
   },
   "license": "MIT",
   "repository": {

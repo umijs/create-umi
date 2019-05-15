@@ -5,7 +5,7 @@
     "target": "esnext",
     "lib": ["esnext", "dom"],
     "sourceMap": true,
-    "baseUrl": ".",
+    "baseUrl": "",
     "jsx": "react",
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
@@ -17,7 +17,7 @@
     "experimentalDecorators": true,
     "strict": true,
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["src/*"]
     }
   },
   "exclude": [

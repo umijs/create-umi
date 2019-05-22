@@ -26,4 +26,5 @@ if (!semver.satisfies(process.version, '>= 8.0.0')) {
 const name = args._[0] || '';
 run({
   name,
+  args,
 });

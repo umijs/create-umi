@@ -1,6 +1,6 @@
 {
   "name": "create-umi",
-  "version": "0.13.1",
+  "version": "0.13.2",
   "description": "Creates a UmiJS application using the command line.",
   "bin": {
     "create-umi": "cli.js"
@@ -18,10 +18,10 @@
     "glob": "^7.1.4",
     "inquirer": "^6.2.1",
     "mkdirp": "^0.5.1",
+    "prettier": "^1.17.0",
     "semver": "^6.1.0",
     "yargs-parser": "^11.0.0",
-    "yeoman-generator": "^4.0.1",
-    "prettier": "^1.17.0"
+    "yeoman-generator": "^4.0.1"
   },
   "devDependencies": {
     "np": "^5.0.1"

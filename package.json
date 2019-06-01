@@ -20,6 +20,7 @@
     "mkdirp": "^0.5.1",
     "prettier": "^1.17.0",
     "semver": "^6.1.0",
+    "sylvanas": "~0.0.3",
     "yargs-parser": "^11.0.0",
     "yeoman-generator": "^4.0.1"
   },

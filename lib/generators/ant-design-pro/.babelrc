@@ -1,7 +1,10 @@
 {
   "plugins": [
-    ["@babel/plugin-transform-typescript", {
-      "isTSX": true,
-    }],
+    [
+      "@babel/plugin-transform-typescript",
+      {
+        "isTSX": true
+      }
+    ]
   ]
 }

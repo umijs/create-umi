@@ -14,7 +14,7 @@ $ yarn create umi [appName]
 
 ## Boilerplates
 
-* `ant-design-pro` - Create project with an layout-only ant-design-pro boilerplate, use together with umi block.
+* `ant-design-pro` - Create project with a layout-only ant-design-pro boilerplate, use together with umi block.
 * `app ` - Create project with a simple boilerplate, support typescript.
 * `block ` - Create a umi block.
 * `library ` - Create a library with umi.
@@ -26,7 +26,7 @@ $ yarn create umi [appName]
 $ yarn create umi
 
 ? Select the boilerplate type (Use arrow keys)
-  ant-design-pro  - Create project with an layout-only ant-design-pro boilerplate, use together with umi block.
+  ant-design-pro  - Create project with a layout-only ant-design-pro boilerplate, use together with umi block.
 ❯ app             - Create project with a simple boilerplate, support typescript.
   block           - Create a umi block.
   library         - Create a library with umi.

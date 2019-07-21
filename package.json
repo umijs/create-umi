@@ -34,6 +34,7 @@
     "mkdirp": "^0.5.1",
     "prettier": "^1.17.0",
     "semver": "^6.1.0",
+    "sort-package-json": "^1.22.1",
     "sylvanas": "~0.2.0",
     "umi-utils": "^1.5.2",
     "yargs-parser": "^13.1.1",

@@ -2,6 +2,20 @@
   "name": "create-umi",
   "version": "0.13.7",
   "description": "Creates a UmiJS application using the command line.",
+  "homepage": "https://github.com/umijs/create-umi",
+  "bugs": {
+    "url": "https://github.com/umijs/create-umi/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/umijs/create-umi"
+  },
+  "license": "MIT",
+  "files": [
+    "cli.js",
+    "index.js",
+    "lib"
+  ],
   "bin": {
     "create-umi": "cli.js"
   },
@@ -20,28 +34,16 @@
     "mkdirp": "^0.5.1",
     "prettier": "^1.17.0",
     "semver": "^6.1.0",
+    "sort-package-json": "^1.22.1",
     "sylvanas": "~0.2.0",
+    "umi-utils": "^1.5.2",
     "yargs-parser": "^13.1.1",
     "yeoman-generator": "^4.0.1"
   },
   "devDependencies": {
     "np": "^5.0.1"
   },
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/umijs/create-umi"
-  },
-  "homepage": "https://github.com/umijs/create-umi",
   "authors": [
     "chencheng <sorrycc@gmail.com> (https://github.com/sorrycc)"
-  ],
-  "bugs": {
-    "url": "https://github.com/umijs/create-umi/issues"
-  },
-  "files": [
-    "cli.js",
-    "index.js",
-    "lib"
   ]
 }

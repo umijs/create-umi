@@ -2,28 +2,93 @@ const coffee = require('coffee');
 const path = require('path');
 const os = require('os');
 const fs = require('fs');
+const assert = require('assert');
 
 describe('test umi-create', () => {
-  it('test generate antd pro project', () => {
-    const fixtures = fs.mkdtempSync(path.join(os.tmpdir(), `umi-create`));
+  it('test generate antd pro project from github', async () => {
+    let temp = fs.mkdtempSync(path.join(os.tmpdir(), `umi-create`));
+    if (os.platform() === 'darwin') {
+      temp = path.join('/private', temp);
+    }
     const Coffee = coffee.Coffee;
-
-    return new Coffee({
+    const fixtures = path.join(__dirname, 'fixtures');
+    const response = await new Coffee({
       method: 'fork',
       cmd: path.join(__dirname, '../cli.js'),
-      opt: { cwd: fixtures },
+      opt: { cwd: temp },
     })
-      .debug()
-      .expect('stdout', /Select the boilerplate type ant-design-pro/)
+      .beforeScript(path.join(fixtures, 'mock_github.js'))
       .waitForPrompt()
       .write('\n')
       .waitForPrompt()
-      .write('\n')
+      .writeKey('DOWN', 'ENTER')
       .expect('code', 0)
-      .expect(
-        'stdout',
-        new RegExp('git clone https://github.com.cnpmjs.org/ant-design/ant-design-pro --depth=1'),
-      )
       .end();
+
+    const expectStdout = [
+      '? Select the boilerplate type (Use arrow keys)',
+      '❯ ant-design-pro  - Create project with a layout-only ant-design-pro boilerplate',
+      ', use together with umi block. ',
+      '  app             - Create project with a simple boilerplate, support typescript',
+      '. ',
+      '  block           - Create a umi block. ',
+      '  library         - Create a library with umi. ',
+      '  plugin          - Create a umi plugin. \u001b[41D\u001b[41C\u001b[2K\u001b[1A\u001b[2K\u001b[1A\u001b[2K\u001b[1A\u001b[2K\u001b[1A\u001b[2K\u001b[1A\u001b[2K\u001b[1A\u001b[2K\u001b[1A\u001b[2K\u001b[G? Select the boilerplate type ant-design-pro\u001b[44D\u001b[44C',
+      '? Which language do you want to use? (Use arrow keys)',
+      '❯ TypeScript ',
+      '  JavaScript \u001b[13D\u001b[13C\u001b[2K\u001b[1A\u001b[2K\u001b[1A\u001b[2K\u001b[G? Which language do you want to use? ',
+      '  TypeScript ',
+      '❯ JavaScript \u001b[13D\u001b[13C\u001b[2K\u001b[1A\u001b[2K\u001b[1A\u001b[2K\u001b[G? Which language do you want to use? JavaScript\u001b[47D\u001b[47C',
+      `> git clone https://github.com/ant-design/ant-design-pro --depth=1 ${temp}`,
+      '> [Sylvanas] Prepare js environment...',
+      '> [JS] Clean up...',
+      '> Clean up...',
+      '✨ File Generate Done',
+      '',
+    ];
+
+    assert.equal(response.stdout, expectStdout.join('\n'));
+    assert.equal(response.code, 0);
+  });
+
+  it('test generate antd pro project from github.com.cnpmjs.org', async () => {
+    let temp = fs.mkdtempSync(path.join(os.tmpdir(), `umi-create`));
+    if (os.platform() === 'darwin') {
+      temp = path.join('/private', temp);
+    }
+    const Coffee = coffee.Coffee;
+    const fixtures = path.join(__dirname, 'fixtures');
+    const response = await new Coffee({
+      method: 'fork',
+      cmd: path.join(__dirname, '../cli.js'),
+      opt: { cwd: temp },
+    })
+      .beforeScript(path.join(fixtures, 'mock_cnpmjs.js'))
+      .waitForPrompt()
+      .write('\n')
+      .waitForPrompt()
+      .write('\n')
+      .end();
+
+    const expectStdout = [
+      '? Select the boilerplate type (Use arrow keys)',
+      '❯ ant-design-pro  - Create project with a layout-only ant-design-pro boilerplate',
+      ', use together with umi block. ',
+      '  app             - Create project with a simple boilerplate, support typescript',
+      '. ',
+      '  block           - Create a umi block. ',
+      '  library         - Create a library with umi. ',
+      '  plugin          - Create a umi plugin. \u001b[41D\u001b[41C\u001b[2K\u001b[1A\u001b[2K\u001b[1A\u001b[2K\u001b[1A\u001b[2K\u001b[1A\u001b[2K\u001b[1A\u001b[2K\u001b[1A\u001b[2K\u001b[1A\u001b[2K\u001b[G? Select the boilerplate type ant-design-pro\u001b[44D\u001b[44C',
+      '? Which language do you want to use? (Use arrow keys)',
+      '❯ TypeScript ',
+      '  JavaScript \u001b[13D\u001b[13C\u001b[2K\u001b[1A\u001b[2K\u001b[1A\u001b[2K\u001b[G? Which language do you want to use? TypeScript\u001b[47D\u001b[47C',
+      `> git clone https://github.com.cnpmjs.org/ant-design/ant-design-pro --depth=1 ${temp}`,
+      '> Clean up...',
+      '✨ File Generate Done',
+      '',
+    ];
+
+    assert.equal(response.stdout, expectStdout.join('\n'));
+    assert.equal(response.code, 0);
   });
 });

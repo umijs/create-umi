@@ -46,7 +46,7 @@
     "tslint-react": "^3.6.0",
     "umi": "^2.7.0",
     "umi-plugin-react": "^1.8.0",
-    "umi-types": "^0.2.0"
+    "umi-types": "^0.3.0"
     <% } else { %>
     "umi": "^2.7.7",
     "umi-plugin-react": "^1.8.4"

@@ -21,6 +21,7 @@
   },
   "scripts": {
     "prepublishOnly": "np --no-cleanup --yolo --no-publish",
+    "test": "egg-bin test",
     "prettier": "prettier -c --write '**/*'"
   },
   "dependencies": {
@@ -41,6 +42,9 @@
     "yeoman-generator": "^4.0.1"
   },
   "devDependencies": {
+    "coffee": "^5.2.1",
+    "egg-bin": "^4.13.0",
+    "mm": "^2.5.0",
     "np": "^5.0.1"
   },
   "authors": [

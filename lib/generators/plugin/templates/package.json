@@ -10,7 +10,7 @@
   "peerDependencies": {
     "umi": "2.x"
   },
-  <% if (useBabel) { %>
+<% if (useBabel) { -%>
   "main":  "lib/index.js",
   "scripts": {
     "build":  "umi-tools build",
@@ -24,7 +24,7 @@
     "lib",
     "src"
   ],
-  <% } else { %>
+<% } else { -%>
   "scripts": {
     "prepublishOnly": "np --no-cleanup --yolo --no-publish"
   },
@@ -34,6 +34,6 @@
   "files": [
     "index.js"
   ],
-  <% } %>
+<% } -%>
   "license": "MIT"
 }

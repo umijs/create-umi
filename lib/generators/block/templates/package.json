@@ -16,12 +16,12 @@
   },
   "devDependencies": {
     "umi": "^2.0.0",
-    <% if (isTypeScript) { %>
+<% if (isTypeScript) { -%>
     "umi-plugin-block-dev": "^2.0.0",
     "umi-types": "^0.3.0"
-    <% } else { %>
+<% } else { -%>
     "umi-plugin-block-dev": "^2.0.0"
-    <% } %>
-    },
+<% } -%>
+  },
   "license": "MIT"
 }

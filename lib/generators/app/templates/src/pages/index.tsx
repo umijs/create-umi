@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './index.css';
-<% if (reactFeatures.includes('locale')) { %>import { formatMessage } from 'umi-plugin-locale';<% } %>
+<% if (reactFeatures.includes('locale')) { %>import { formatMessage } from 'umi-plugin-locale';<% } -%>
 
 export default function() {
   return (

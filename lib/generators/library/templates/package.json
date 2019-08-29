@@ -17,12 +17,12 @@
     "react": "16.x"
   },
   "devDependencies": {
-    <% if (isTypeScript) { %>
+<% if (isTypeScript) { -%>
     "father": "^2.16.0",
     "typescript": "^3.3.3"
-    <% } else { %>
+<% } else { -%>
     "father": "^2.16.0"
-    <% } %>
-    },
+<% } -%>
+  },
   "license": "MIT"
 }

@@ -1,6 +1,6 @@
 {
   "name": "create-umi",
-  "version": "0.14.0",
+  "version": "0.15.0",
   "description": "Creates a UmiJS application using the command line.",
   "homepage": "https://github.com/umijs/create-umi",
   "bugs": {

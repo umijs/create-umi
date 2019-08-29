@@ -17,12 +17,12 @@
     "react": "16.x"
   },
   "devDependencies": {
-    <% if (isTypeScript) { %>
+<% if (isTypeScript) { -%>
     "umi-library": "^1.1.1",
     "typescript": "^3.3.3"
-    <% } else { %>
+<% } else { -%>
     "umi-library": "^1.1.1"
-    <% } %>
-    },
+<% } -%>
+  },
   "license": "MIT"
 }

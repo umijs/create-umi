@@ -1,4 +1,4 @@
-import { IBundleOptions } from 'umi-library/src/types';
+import { IBundleOptions } from 'father';
 
 const options: IBundleOptions = {
   cjs: 'rollup',

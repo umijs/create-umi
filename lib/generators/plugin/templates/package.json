@@ -8,32 +8,26 @@
   },
   "repository": "<%= org %>/<%= name %>",
   "peerDependencies": {
-    "umi": "2.x"
+    "antd": "4.x",
+    "umi": "2.x || ^2.9.0-0"
   },
-<% if (useBabel) { -%>
   "main":  "lib/index.js",
   "scripts": {
-    "build":  "umi-tools build",
+    "start": "CURRENT_PROJECT=example umi ui",
+    "build":  "father-build",
     "prepublishOnly": "npm run build && np --no-cleanup --yolo --no-publish"
   },
   "devDependencies": {
-    "umi-tools":  "*",
-    "np": "^3.0.4"
+    "father-build":  "^1.8.0",
+    "np": "^5.0.3",
+    "umi": "^2.9.0-beta.6",
+    "umi-types": "^0.3.17"
   },
   "files": [
+    "dist",
     "lib",
-    "src"
+    "src",
+    "ui"
   ],
-<% } else { -%>
-  "scripts": {
-    "prepublishOnly": "np --no-cleanup --yolo --no-publish"
-  },
-  "devDependencies": {
-    "np": "^3.0.4"
-  },
-  "files": [
-    "index.js"
-  ],
-<% } -%>
   "license": "MIT"
 }

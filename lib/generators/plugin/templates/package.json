@@ -20,7 +20,7 @@
   "devDependencies": {
     "father-build":  "^1.8.0",
     "np": "^5.0.3",
-    "umi": "^2.9.0-beta.6",
+    "umi": "^2.9.0",
     "umi-types": "^0.3.17"
   },
 <% if (true) { %>

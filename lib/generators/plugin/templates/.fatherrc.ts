@@ -5,7 +5,10 @@ export default [
   },
 <% if (withUmiUI) { -%>
   {
-    entry: 'ui/index.js',
+    entry: 'ui/index.tsx',
+    typescriptOpts: {
+      check: false,
+    },
     umd: {
       name: '<%= name %>',
       minFile: false,

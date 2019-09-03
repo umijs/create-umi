@@ -8,8 +8,10 @@
   },
   "repository": "<%= org %>/<%= name %>",
   "peerDependencies": {
-    "antd": "4.x",
-    "umi": "2.x || ^2.9.0-0"
+  <% if (withUmiUI) { -%>
+  "antd": "4.x",
+  <% } -%>
+  "umi": "2.x || ^2.9.0-0"
   },
   "main":  "lib/index.js",
   "scripts": {
@@ -19,17 +21,18 @@
   },
   "devDependencies": {
     "father-build":  "^1.8.0",
-    "np": "^5.0.3",
+  <% if (withUmiUI) { -%>
+  "antd": "^4.0.0-alpha.0",
+  <% } -%>
+  "np": "^5.0.3",
     "umi": "^2.9.0",
-    "umi-types": "^0.3.17"
+    "umi-types": "^0.4.0-beta.4"
   },
-<% if (true) { %>
   "files": [
     "dist",
     "lib",
     "src",
     "ui"
   ],
-<% } %>
   "license": "MIT"
 }

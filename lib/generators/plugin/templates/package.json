@@ -28,13 +28,11 @@
     "umi": "^2.9.0",
     "umi-types": "^0.4.0-beta.4"
   },
-<% if (true) { %>
   "files": [
     "dist",
     "lib",
     "src",
     "ui"
   ],
-<% } %>
   "license": "MIT"
 }

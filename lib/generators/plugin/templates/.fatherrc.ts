@@ -14,5 +14,5 @@ export default [
       minFile: false,
     },
   },
-<% } %>
+<% } -%>
 ];

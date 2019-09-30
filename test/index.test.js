@@ -91,4 +91,28 @@ describe('test umi-create', () => {
     assert.equal(response.stdout, expectStdout.join('\n'));
     assert.equal(response.code, 0);
   });
+
+  it('tsconfig.json should be removed if JavaScript is picked', async () => {
+    let temp = fs.mkdtempSync(path.join(os.tmpdir(), `umi-create`));
+    if (os.platform() === 'darwin') {
+      temp = path.join('/private', temp);
+    }
+    const Coffee = coffee.Coffee;
+    const fixtures = path.join(__dirname, 'fixtures');
+    const response = await new Coffee({
+      method: 'fork',
+      cmd: path.join(__dirname, '../cli.js'),
+      opt: { cwd: temp },
+    })
+      .beforeScript(path.join(fixtures, 'mock_cnpmjs.js'))
+      .waitForPrompt()
+      .write('\n')
+      .waitForPrompt()
+      .writeKey('DOWN', 'ENTER')
+      .end();
+
+    assert.equal(response.code, 0);
+    assert.ok(fs.existsSync(path.join(temp, 'jsconfig.json')));
+    assert.ok(!fs.existsSync(path.join(temp, 'tsconfig.json')));
+  });
 });

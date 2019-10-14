@@ -17,11 +17,12 @@
   },
   "main":  "lib/index.js",
   "scripts": {
-    "start": "CURRENT_PROJECT=example umi ui",
+    "start": "cross-env CURRENT_PROJECT=example umi ui",
     "build":  "father-build",
     "prepublishOnly": "npm run build && np --no-cleanup --yolo --no-publish"
   },
   "devDependencies": {
+    "cross-env": "^6.0.3",
     "father-build":  "^1.8.0",
   <% if (withUmiUI) { -%>
   "antd": "^4.0.0-alpha.0",

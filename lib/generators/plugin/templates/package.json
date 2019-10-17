@@ -17,8 +17,12 @@
   },
   "main":  "lib/index.js",
   "scripts": {
+    <% if (withUmiUI) { -%>
     "start:mini": "cross-env UMI_UI=1 APP_ROOT=$PWD/example umi dev",
-    "start": "cross-env CURRENT_PROJECT=example umi ui",
+      "start": "cross-env CURRENT_PROJECT=example umi ui",
+    <% } else -%>
+      "start": "cross-env APP_ROOT=$PWD/example umi dev",
+    %>
     "build":  "father-build",
     "prepublishOnly": "npm run build && np --no-cleanup --yolo --no-publish"
   },

@@ -10,13 +10,14 @@
   "peerDependencies": {
   <% if (withUmiUI) { -%>
   "antd": "4.x",
-  "react": "^16.8.6",
-  "react-dom": "^16.8.6",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
   <% } -%>
   "umi": "2.x || ^2.9.0-0"
   },
   "main":  "lib/index.js",
   "scripts": {
+    "start:mini": "cross-env UMI_UI=1 APP_ROOT=$PWD/example umi dev",
     "start": "cross-env CURRENT_PROJECT=example umi ui",
     "build":  "father-build",
     "prepublishOnly": "npm run build && np --no-cleanup --yolo --no-publish"

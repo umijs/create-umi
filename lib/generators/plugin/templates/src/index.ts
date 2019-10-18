@@ -6,7 +6,7 @@ export default function (api: IApi, options) {
 
   // Example: output the webpack config
   api.chainWebpackConfig(config => {
-    console.log(config.toString());
+    // console.log(config.toString());
   });
 
 <% if (withUmiUI) { -%>

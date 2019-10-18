@@ -6,3 +6,6 @@
 /example/pages/.umi
 /example/pages/.umi-production
 /lib
+<% if (withUmiUI) { -%>
+/dist
+<% } -%>

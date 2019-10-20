@@ -13,7 +13,7 @@
 
 .list {
   font-size: 1.2em;
-  margin-top: 1.8em;
+  margin: 1.8em 0 0;
   list-style: none;
   line-height: 1.5em;
 }

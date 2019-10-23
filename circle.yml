@@ -13,6 +13,7 @@ jobs:
       NODE_ENV: test
       NODE_OPTIONS: --max_old_space_size=4096
       NPM_CONFIG_LOGLEVEL: error
+      TEST_TIMEOUT: 300000
       JOBS: max # https://gist.github.com/ralphtheninja/f7c45bdee00784b41fed
     branches:
       ignore:

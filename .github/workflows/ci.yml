@@ -20,6 +20,7 @@ jobs:
       env:
         CI: true
         HEADLESS: false
+        TEST_TIMEOUT: 300000
         PROGRESS: none
         NODE_ENV: test
         NODE_OPTIONS: --max_old_space_size=4096

@@ -45,8 +45,7 @@ describe('test umi-create', () => {
       '✨ File Generate Done',
       '',
     ];
-
-    expect(response.stdout).toMatchSnapshot();
+    expect(response.stdout).toEqual(expectStdout.join('\n'));
     expect(response.code).toBe(0);
   });
 
@@ -86,11 +85,12 @@ describe('test umi-create', () => {
       '✨ File Generate Done',
       '',
     ];
-
-    expect(response.stdout).toMatchSnapshot();
+    expect(response.stdout).toEqual(expectStdout.join('\n'));
     expect(response.code).toBe(0);
   });
+});
 
+describe('typescript', () => {
   it('tsconfig.json should be removed if JavaScript is picked', async () => {
     let temp = fs.mkdtempSync(path.join(os.tmpdir(), `umi-create`));
     if (os.platform() === 'darwin') {
@@ -114,4 +114,4 @@ describe('test umi-create', () => {
     expect(fs.existsSync(path.join(temp, 'jsconfig.json'))).toBeTruthy();
     expect(fs.existsSync(path.join(temp, 'tsconfig.json'))).toBeFalsy();
   });
-});
+})

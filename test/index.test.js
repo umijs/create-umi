@@ -2,7 +2,6 @@ const coffee = require('coffee');
 const path = require('path');
 const os = require('os');
 const fs = require('fs');
-const assert = require('assert');
 
 describe('test umi-create', () => {
   it('test generate antd pro project from github', async () => {
@@ -47,8 +46,8 @@ describe('test umi-create', () => {
       '',
     ];
 
-    assert.equal(response.stdout, expectStdout.join('\n'));
-    assert.equal(response.code, 0);
+    expect(response.stdout).toMatchSnapshot();
+    expect(response.code).toBe(0);
   });
 
   it('test generate antd pro project from github.com.cnpmjs.org', async () => {
@@ -88,8 +87,8 @@ describe('test umi-create', () => {
       '',
     ];
 
-    assert.equal(response.stdout, expectStdout.join('\n'));
-    assert.equal(response.code, 0);
+    expect(response.stdout).toMatchSnapshot();
+    expect(response.code).toBe(0);
   });
 
   it('tsconfig.json should be removed if JavaScript is picked', async () => {
@@ -111,8 +110,8 @@ describe('test umi-create', () => {
       .writeKey('DOWN', 'ENTER')
       .end();
 
-    assert.equal(response.code, 0);
-    assert.ok(fs.existsSync(path.join(temp, 'jsconfig.json')));
-    assert.ok(!fs.existsSync(path.join(temp, 'tsconfig.json')));
+    expect(response.code).toBe(0);
+    expect(fs.existsSync(path.join(temp, 'jsconfig.json'))).toBeTruthy();
+    expect(fs.existsSync(path.join(temp, 'tsconfig.json'))).toBeFalsy();
   });
 });

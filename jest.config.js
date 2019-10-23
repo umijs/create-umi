@@ -3,13 +3,13 @@ module.exports = {
     './test/jest.setup.js'
   ],
   modulePathIgnorePatterns: [
-    "<rootDir>/lib",
+    "<rootDir>/.*/templates",
   ],
   testPathIgnorePatterns: [
     "/lib/"
   ],
   collectCoverageFrom: [
+    '!lib/**/templates/**',
     'lib/**/*.{js.ts}',
-    '!lib/**/templates/**'
   ],
 }

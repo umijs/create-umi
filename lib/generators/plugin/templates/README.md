@@ -1,7 +1,7 @@
-# umi-plugin-<%= name %>
+# <%= name %>
 
-[![NPM version](https://img.shields.io/npm/v/umi-plugin-<%= name %>.svg?style=flat)](https://npmjs.org/package/umi-plugin-<%= name %>)
-[![NPM downloads](http://img.shields.io/npm/dm/umi-plugin-<%= name %>.svg?style=flat)](https://npmjs.org/package/umi-plugin-<%= name %>)
+[![NPM version](https://img.shields.io/npm/v/<%= name %>.svg?style=flat)](https://npmjs.org/package/<%= name %>)
+[![NPM downloads](http://img.shields.io/npm/dm/<%= name %>.svg?style=flat)](https://npmjs.org/package/<%= name %>)
 
 <%= description %>
 
@@ -11,7 +11,7 @@
 # or yarn
 $ npm install
 ```
-
+<% if (withUmiUI) { -%>
 ## Development UI
 
 UI start:
@@ -31,6 +31,14 @@ $ npm run start:mini
 ```
 
 <img src="https://user-images.githubusercontent.com/13595509/67024897-bbeede80-f137-11e9-9f19-6a3f0ea3f6cd.png" width="768" />
+<% } else { -%>
+
+```bash
+$ npm run build --watch
+$ npm run start
+```
+
+<% } -%>
 
 ## Usage
 

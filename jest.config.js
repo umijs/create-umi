@@ -1,5 +1,5 @@
 module.exports = {
-  setupTestFrameworkScriptFile: './test/jest.setup.js',
+  setupFilesAfterEnv: './test/jest.setup.js',
   modulePathIgnorePatterns: [
     "<rootDir>/lib",
   ],

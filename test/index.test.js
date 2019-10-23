@@ -83,6 +83,9 @@ describe('test umi-create', () => {
       `> git clone https://github.com.cnpmjs.org/ant-design/ant-design-pro --depth=1 ${temp}`,
       '',
     ];
+    if (response.code !== 0) {
+      console.log(response);
+    }
     expect(response.stdout).toEqual(expectStdout.join('\n'));
     expect(response.code).toBe(0);
   });

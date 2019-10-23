@@ -50,7 +50,7 @@ describe('test umi-create', () => {
   });
 
   it('test generate antd pro project from github.com.cnpmjs.org', async () => {
-    let temp = fs.mkdtempSync(path.join(os.tmpdir(), `umi-create`));
+    let temp = fs.mkdtempSync(path.join(os.tmpdir(), `umi-create-cnpm`));
     if (os.platform() === 'darwin') {
       temp = path.join('/private', temp);
     }

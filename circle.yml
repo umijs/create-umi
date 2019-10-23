@@ -27,8 +27,9 @@ jobs:
       - run: sudo npm install -g cnpm
       - run: cnpm install --registry=https://registry.npmjs.org
       - run:
-          command: npm run test
+          command: npm run cov
           no_output_timeout: 300m
+      - run: bash <(curl -s https://codecov.io/bash)
       - save_cache:
           key: node-modules-{{ checksum "package.json" }}
           paths:

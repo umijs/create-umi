@@ -22,6 +22,7 @@
   "scripts": {
     "prepublishOnly": "np --no-cleanup --yolo --no-publish",
     "test": "egg-bin test",
+    "cov": "egg-bin cov",
     "prettier": "prettier -c --write '**/*'"
   },
   "dependencies": {

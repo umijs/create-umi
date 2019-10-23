@@ -81,8 +81,6 @@ describe('test umi-create', () => {
       '❯ TypeScript ',
       '  JavaScript \u001b[13D\u001b[13C\u001b[2K\u001b[1A\u001b[2K\u001b[1A\u001b[2K\u001b[G? Which language do you want to use? TypeScript\u001b[47D\u001b[47C',
       `> git clone https://github.com.cnpmjs.org/ant-design/ant-design-pro --depth=1 ${temp}`,
-      '> Clean up...',
-      '✨ File Generate Done',
       '',
     ];
     expect(response.stdout).toEqual(expectStdout.join('\n'));
@@ -103,7 +101,7 @@ describe('typescript', () => {
       cmd: path.join(__dirname, '../cli.js'),
       opt: { cwd: temp },
     })
-      .beforeScript(path.join(fixtures, 'mock_cnpmjs.js'))
+      .beforeScript(path.join(fixtures, 'mock_github.js'))
       .waitForPrompt()
       .write('\n')
       .waitForPrompt()

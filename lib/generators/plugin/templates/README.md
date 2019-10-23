@@ -37,7 +37,6 @@ $ npm run start:mini
 $ npm run build --watch
 $ npm run start
 ```
-
 <% } -%>
 
 ## Usage

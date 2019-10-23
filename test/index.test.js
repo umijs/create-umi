@@ -5,7 +5,7 @@ const fs = require('fs');
 const assert = require('assert');
 
 describe('test umi-create', () => {
-  it('test generate antd pro project from github', async (done) => {
+  it('test generate antd pro project from github', async () => {
     let temp = fs.mkdtempSync(path.join(os.tmpdir(), `umi-create`));
     if (os.platform() === 'darwin') {
       temp = path.join('/private', temp);
@@ -49,10 +49,9 @@ describe('test umi-create', () => {
 
     assert.equal(response.stdout, expectStdout.join('\n'));
     assert.equal(response.code, 0);
-    done();
   });
 
-  it('test generate antd pro project from github.com.cnpmjs.org', async (done) => {
+  it('test generate antd pro project from github.com.cnpmjs.org', async () => {
     let temp = fs.mkdtempSync(path.join(os.tmpdir(), `umi-create`));
     if (os.platform() === 'darwin') {
       temp = path.join('/private', temp);
@@ -91,10 +90,9 @@ describe('test umi-create', () => {
 
     assert.equal(response.stdout, expectStdout.join('\n'));
     assert.equal(response.code, 0);
-    done();
   });
 
-  it('tsconfig.json should be removed if JavaScript is picked', async (done) => {
+  it('tsconfig.json should be removed if JavaScript is picked', async () => {
     let temp = fs.mkdtempSync(path.join(os.tmpdir(), `umi-create`));
     if (os.platform() === 'darwin') {
       temp = path.join('/private', temp);
@@ -116,6 +114,5 @@ describe('test umi-create', () => {
     assert.equal(response.code, 0);
     assert.ok(fs.existsSync(path.join(temp, 'jsconfig.json')));
     assert.ok(!fs.existsSync(path.join(temp, 'tsconfig.json')));
-    done();
   });
 });

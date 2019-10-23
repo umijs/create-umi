@@ -2,7 +2,6 @@
 
 Creates a UmiJS application/plugin/block/library using the command line.
 
-
 [![codecov](https://codecov.io/gh/umijs/create-umi/branch/master/graph/badge.svg)](https://codecov.io/gh/umijs/create-umi)
 [![NPM version](https://img.shields.io/npm/v/create-umi.svg?style=flat)](https://npmjs.org/package/create-umi)
 [![NPM downloads](http://img.shields.io/npm/dm/create-umi.svg?style=flat)](https://npmjs.org/package/create-umi)

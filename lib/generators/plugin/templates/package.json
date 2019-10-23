@@ -34,7 +34,7 @@
 <% } -%>
     "np": "^5.0.3",
     "umi": "^2.9.0",
-    "umi-types": "^0.4.0-beta.4"
+    "umi-types": ">= 0.4.0-beta.4"
   },
   "files": [
 <% if (withUmiUI) { -%>

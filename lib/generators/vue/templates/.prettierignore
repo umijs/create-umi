@@ -1,0 +1,7 @@
+**/*.md
+**/*.svg
+**/*.ejs
+**/*.html
+dist
+.umi
+.umi-production

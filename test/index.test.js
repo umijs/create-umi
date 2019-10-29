@@ -80,7 +80,7 @@ describe('test umi-create', () => {
       '? Which language do you want to use? (Use arrow keys)',
       '❯ TypeScript ',
       '  JavaScript \u001b[13D\u001b[13C\u001b[2K\u001b[1A\u001b[2K\u001b[1A\u001b[2K\u001b[G? Which language do you want to use? TypeScript\u001b[47D\u001b[47C',
-      `> git clone https://github.com.cnpmjs.org/ant-design/ant-design-pro --depth=1 ${temp}`,
+      `> git clone https://github.com/ant-design/ant-design-pro --depth=1 ${temp}`,
       '> Clean up...',
       '✨ File Generate Done',
       '',

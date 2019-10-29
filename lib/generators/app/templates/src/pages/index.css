@@ -6,14 +6,14 @@
 }
 
 .welcome {
-  height: 328px;
+  height: 512px;
   background: url(../assets/yay.jpg) no-repeat center 0;
-  background-size: 388px 328px;
+  background-size: 512px 512px;
 }
 
 .list {
   font-size: 1.2em;
-  margin-top: 1.8em;
+  margin: 1.8em 0 0;
   list-style: none;
   line-height: 1.5em;
 }

@@ -21,7 +21,8 @@
   },
   "scripts": {
     "prepublishOnly": "np --no-cleanup --yolo --no-publish",
-    "test": "egg-bin test",
+    "test": "umi-test test/index.test.js",
+    "cov": "umi-test test/index.test.js --coverage",
     "prettier": "prettier -c --write '**/*'"
   },
   "dependencies": {
@@ -42,9 +43,10 @@
     "yeoman-generator": "^4.0.1"
   },
   "devDependencies": {
+    "@types/jest": "^24.0.19",
     "coffee": "^5.2.1",
-    "egg-bin": "^4.13.0",
     "mm": "^2.5.0",
+    "umi-test": "^1.8.2",
     "np": "^5.0.1"
   },
   "authors": [

@@ -2,7 +2,6 @@ const coffee = require('coffee');
 const path = require('path');
 const os = require('os');
 const fs = require('fs');
-const assert = require('assert');
 
 describe('test umi-create', () => {
   it('test generate antd pro project from github', async () => {
@@ -46,13 +45,12 @@ describe('test umi-create', () => {
       '✨ File Generate Done',
       '',
     ];
-
-    assert.equal(response.stdout, expectStdout.join('\n'));
-    assert.equal(response.code, 0);
+    expect(response.stdout).toEqual(expectStdout.join('\n'));
+    expect(response.code).toBe(0);
   });
 
   it('test generate antd pro project from github.com.cnpmjs.org', async () => {
-    let temp = fs.mkdtempSync(path.join(os.tmpdir(), `umi-create`));
+    let temp = fs.mkdtempSync(path.join(os.tmpdir(), `umi-create-cnpm`));
     if (os.platform() === 'darwin') {
       temp = path.join('/private', temp);
     }
@@ -82,16 +80,20 @@ describe('test umi-create', () => {
       '? Which language do you want to use? (Use arrow keys)',
       '❯ TypeScript ',
       '  JavaScript \u001b[13D\u001b[13C\u001b[2K\u001b[1A\u001b[2K\u001b[1A\u001b[2K\u001b[G? Which language do you want to use? TypeScript\u001b[47D\u001b[47C',
-      `> git clone https://github.com.cnpmjs.org/ant-design/ant-design-pro --depth=1 ${temp}`,
+      `> git clone https://github.com/ant-design/ant-design-pro --depth=1 ${temp}`,
       '> Clean up...',
       '✨ File Generate Done',
       '',
     ];
-
-    assert.equal(response.stdout, expectStdout.join('\n'));
-    assert.equal(response.code, 0);
+    if (response.code !== 0) {
+      console.log(response);
+    }
+    expect(response.stdout).toEqual(expectStdout.join('\n'));
+    expect(response.code).toBe(0);
   });
+});
 
+describe('typescript', () => {
   it('tsconfig.json should be removed if JavaScript is picked', async () => {
     let temp = fs.mkdtempSync(path.join(os.tmpdir(), `umi-create`));
     if (os.platform() === 'darwin') {
@@ -104,15 +106,15 @@ describe('test umi-create', () => {
       cmd: path.join(__dirname, '../cli.js'),
       opt: { cwd: temp },
     })
-      .beforeScript(path.join(fixtures, 'mock_cnpmjs.js'))
+      .beforeScript(path.join(fixtures, 'mock_github.js'))
       .waitForPrompt()
       .write('\n')
       .waitForPrompt()
       .writeKey('DOWN', 'ENTER')
       .end();
 
-    assert.equal(response.code, 0);
-    assert.ok(fs.existsSync(path.join(temp, 'jsconfig.json')));
-    assert.ok(!fs.existsSync(path.join(temp, 'tsconfig.json')));
+    expect(response.code).toBe(0);
+    expect(fs.existsSync(path.join(temp, 'jsconfig.json'))).toBeTruthy();
+    expect(fs.existsSync(path.join(temp, 'tsconfig.json'))).toBeFalsy();
   });
-});
+})

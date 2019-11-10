@@ -10,8 +10,7 @@
     "baseUrl": ".",
     "strict": true,
     "paths": {
-      "@/*": ["src/*"],
-      "@tmp/*": ["src/pages/.umi/*"]
+      "@/*": ["src/*"]
     },
     "allowSyntheticDefaultImports": true
   }

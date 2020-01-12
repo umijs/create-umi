@@ -4,6 +4,9 @@ const os = require('os');
 const fs = require('fs');
 
 describe('test umi-create', () => {
+  beforeAll(() => {
+    process.env.TEST = 'test';
+  });
   it('test generate antd pro project from github', async () => {
     let temp = fs.mkdtempSync(path.join(os.tmpdir(), `umi-create`));
     if (os.platform() === 'darwin') {
@@ -14,42 +17,21 @@ describe('test umi-create', () => {
     const response = await new Coffee({
       method: 'fork',
       cmd: path.join(__dirname, '../cli.js'),
-      opt: { cwd: temp },
+      opt: { cwd: temp, stdout: process.stdout, stderr: process.stderr, stdin: process.stdin },
     })
       .beforeScript(path.join(fixtures, 'mock_github.js'))
       .waitForPrompt()
       .write('\n')
-      .waitForPrompt()
       .writeKey('DOWN', 'ENTER')
-      .expect('code', 0)
+      .write('\n')
       .end();
 
-    const expectStdout = [
-      '? Select the boilerplate type (Use arrow keys)',
-      '❯ ant-design-pro  - Create project with a layout-only ant-design-pro boilerplate',
-      ', use together with umi block. ',
-      '  app             - Create project with a simple boilerplate, support typescript',
-      '. ',
-      '  block           - Create a umi block. ',
-      '  library         - Create a library with umi. ',
-      '  plugin          - Create a umi plugin. \u001b[41D\u001b[41C\u001b[2K\u001b[1A\u001b[2K\u001b[1A\u001b[2K\u001b[1A\u001b[2K\u001b[1A\u001b[2K\u001b[1A\u001b[2K\u001b[1A\u001b[2K\u001b[1A\u001b[2K\u001b[G? Select the boilerplate type ant-design-pro\u001b[44D\u001b[44C',
-      '? Which language do you want to use? (Use arrow keys)',
-      '❯ TypeScript ',
-      '  JavaScript \u001b[13D\u001b[13C\u001b[2K\u001b[1A\u001b[2K\u001b[1A\u001b[2K\u001b[G? Which language do you want to use? ',
-      '  TypeScript ',
-      '❯ JavaScript \u001b[13D\u001b[13C\u001b[2K\u001b[1A\u001b[2K\u001b[1A\u001b[2K\u001b[G? Which language do you want to use? JavaScript\u001b[47D\u001b[47C',
-      `> git clone https://github.com/ant-design/ant-design-pro --depth=1 ${temp}`,
-      '> [Sylvanas] Prepare js environment...',
-      '> [JS] Clean up...',
-      '> Clean up...',
-      '✨ File Generate Done',
-      '',
-    ];
-    expect(response.stdout).toEqual(expectStdout.join('\n'));
+    expect(response.stdout).toMatchSnapshot();
     expect(response.code).toBe(0);
+    expect(fs.existsSync(path.join(temp, 'package.json'))).toBeTruthy();
   });
 
-  it('test generate antd pro project from github.com.cnpmjs.org', async () => {
+  it('test generate antd pro project from gitee.org', async () => {
     let temp = fs.mkdtempSync(path.join(os.tmpdir(), `umi-create-cnpm`));
     if (os.platform() === 'darwin') {
       temp = path.join('/private', temp);
@@ -64,32 +46,13 @@ describe('test umi-create', () => {
       .beforeScript(path.join(fixtures, 'mock_cnpmjs.js'))
       .waitForPrompt()
       .write('\n')
-      .waitForPrompt()
+      .write('\n')
       .write('\n')
       .end();
 
-    const expectStdout = [
-      '? Select the boilerplate type (Use arrow keys)',
-      '❯ ant-design-pro  - Create project with a layout-only ant-design-pro boilerplate',
-      ', use together with umi block. ',
-      '  app             - Create project with a simple boilerplate, support typescript',
-      '. ',
-      '  block           - Create a umi block. ',
-      '  library         - Create a library with umi. ',
-      '  plugin          - Create a umi plugin. \u001b[41D\u001b[41C\u001b[2K\u001b[1A\u001b[2K\u001b[1A\u001b[2K\u001b[1A\u001b[2K\u001b[1A\u001b[2K\u001b[1A\u001b[2K\u001b[1A\u001b[2K\u001b[1A\u001b[2K\u001b[G? Select the boilerplate type ant-design-pro\u001b[44D\u001b[44C',
-      '? Which language do you want to use? (Use arrow keys)',
-      '❯ TypeScript ',
-      '  JavaScript \u001b[13D\u001b[13C\u001b[2K\u001b[1A\u001b[2K\u001b[1A\u001b[2K\u001b[G? Which language do you want to use? TypeScript\u001b[47D\u001b[47C',
-      `> git clone https://github.com/ant-design/ant-design-pro --depth=1 ${temp}`,
-      '> Clean up...',
-      '✨ File Generate Done',
-      '',
-    ];
-    if (response.code !== 0) {
-      console.log(response);
-    }
-    expect(response.stdout).toEqual(expectStdout.join('\n'));
+    expect(response.stdout).toMatchSnapshot();
     expect(response.code).toBe(0);
+    expect(fs.existsSync(path.join(temp, 'package.json'))).toBeTruthy();
   });
 });
 
@@ -109,12 +72,13 @@ describe('typescript', () => {
       .beforeScript(path.join(fixtures, 'mock_github.js'))
       .waitForPrompt()
       .write('\n')
-      .waitForPrompt()
-      .writeKey('DOWN', 'ENTER')
+      .write('\n')
+      .write('\n')
       .end();
 
     expect(response.code).toBe(0);
     expect(fs.existsSync(path.join(temp, 'jsconfig.json'))).toBeTruthy();
     expect(fs.existsSync(path.join(temp, 'tsconfig.json'))).toBeFalsy();
+    expect(fs.existsSync(path.join(temp, 'package.json'))).toBeTruthy();
   });
-})
+});

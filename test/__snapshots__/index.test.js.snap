@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test umi-create test generate antd pro project from gitee.org 1`] = `
+"? Select the boilerplate type (Use arrow keys)
+> ant-design-pro  - Create project with a layout-only ant-design-pro boilerplate
+, use together with umi block. 
+  app             - Create project with a simple boilerplate, support typescript
+. 
+  block           - Create a umi block. 
+  library         - Create a library with umi. 
+  plugin          - Create a umi plugin. [41D[41C[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G? Select the boilerplate type ant-design-pro[44D[44C
+? 🤓 Which language do you want to use? (Use arrow keys)
+> TypeScript 
+  JavaScript [13D[13C[2K[1A[2K[1A[2K[G? 🤓 Which language do you want to use? TypeScript[49D[50C
+? 🦄 Want to use better and faster antd? (Y/n) [46D[47C[2K[G? 🦄 Want to use better and faster antd? Yes[43D[44C
+>   
+> 使用 antd 4.0 可能会有一些兼容性问题，阅读下面的文档了解具体的改动
+> There may be some compatibility issues when using antd 4.0. Read the following documents for specific changes
+> https://next.ant.design/docs/react/migration-v4-cn
+>   
+> 🚚 clone success
+> [Sylvanas] Prepare js environment...
+> [JS] Clean up...
+> Clean up...
+✨ File Generate Done
+"
+`;
+
+exports[`test umi-create test generate antd pro project from github 1`] = `
+"? Select the boilerplate type (Use arrow keys)
+> ant-design-pro  - Create project with a layout-only ant-design-pro boilerplate
+, use together with umi block. 
+  app             - Create project with a simple boilerplate, support typescript
+. 
+  block           - Create a umi block. 
+  library         - Create a library with umi. 
+  plugin          - Create a umi plugin. [41D[41C[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G? Select the boilerplate type ant-design-pro[44D[44C
+? 🤓 Which language do you want to use? (Use arrow keys)
+> TypeScript 
+  JavaScript [13D[13C[2K[1A[2K[1A[2K[G? 🤓 Which language do you want to use? 
+  TypeScript 
+> JavaScript [13D[13C[2K[1A[2K[1A[2K[G? 🤓 Which language do you want to use? JavaScript[49D[50C
+? 🦄 Want to use better and faster antd? (Y/n) [46D[47C[2K[G? 🦄 Want to use better and faster antd? Yes[43D[44C
+>   
+> 使用 antd 4.0 可能会有一些兼容性问题，阅读下面的文档了解具体的改动
+> There may be some compatibility issues when using antd 4.0. Read the following documents for specific changes
+> https://next.ant.design/docs/react/migration-v4-cn
+>   
+> 🚚 clone success
+> [Sylvanas] Prepare js environment...
+> [JS] Clean up...
+> Clean up...
+✨ File Generate Done
+"
+`;

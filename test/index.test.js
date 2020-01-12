@@ -2,6 +2,7 @@ const coffee = require('coffee');
 const path = require('path');
 const os = require('os');
 const fs = require('fs');
+const { winEOL } = require('umi-utils');
 
 describe('test umi-create', () => {
   beforeAll(() => {
@@ -26,7 +27,7 @@ describe('test umi-create', () => {
       .write('\n')
       .end();
 
-    expect(response.stdout).toMatchSnapshot();
+    expect(winEOL(response.stdout)).toMatchSnapshot();
     expect(response.code).toBe(0);
     expect(fs.existsSync(path.join(temp, 'package.json'))).toBeTruthy();
   });
@@ -50,7 +51,7 @@ describe('test umi-create', () => {
       .write('\n')
       .end();
 
-    expect(response.stdout).toMatchSnapshot();
+    expect(winEOL(response.stdout)).toMatchSnapshot();
     expect(response.code).toBe(0);
     expect(fs.existsSync(path.join(temp, 'package.json'))).toBeTruthy();
   });

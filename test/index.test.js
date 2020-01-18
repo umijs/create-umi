@@ -79,7 +79,7 @@ describe('typescript', () => {
 
     expect(response.code).toBe(0);
     expect(fs.existsSync(path.join(temp, 'jsconfig.json'))).toBeTruthy();
-    expect(fs.existsSync(path.join(temp, 'tsconfig.json'))).toBeFalsy();
+    expect(fs.existsSync(path.join(temp, 'tsconfig.json'))).toBeTruthy();
     expect(fs.existsSync(path.join(temp, 'package.json'))).toBeTruthy();
   });
 });

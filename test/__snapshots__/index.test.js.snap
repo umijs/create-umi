@@ -13,11 +13,6 @@ exports[`test umi-create test generate antd pro project from gitee.org 1`] = `
 ❯ TypeScript 
   JavaScript [13D[13C[2K[1A[2K[1A[2K[G? 🤓 Which language do you want to use? TypeScript[49D[50C
 ? 🦄 Time to use better, faster and latest antd@4! (Y/n) [56D[57C[2K[G? 🦄 Time to use better, faster and latest antd@4! Yes[53D[54C
-❯   
-❯ 使用 antd 4.0 可能会有一些兼容性问题，阅读下面的文档了解具体的改动
-❯ There may be some compatibility issues when using antd 4.0. Read the following documents for specific changes
-❯ https://next.ant.design/docs/react/migration-v4-cn
-❯   
 ❯ 🚚 clone success
 ❯ Clean up...
 ✨ File Generate Done
@@ -39,11 +34,6 @@ exports[`test umi-create test generate antd pro project from github 1`] = `
   TypeScript 
 ❯ JavaScript [13D[13C[2K[1A[2K[1A[2K[G? 🤓 Which language do you want to use? JavaScript[49D[50C
 ? 🦄 Time to use better, faster and latest antd@4! (Y/n) [56D[57C[2K[G? 🦄 Time to use better, faster and latest antd@4! Yes[53D[54C
-❯   
-❯ 使用 antd 4.0 可能会有一些兼容性问题，阅读下面的文档了解具体的改动
-❯ There may be some compatibility issues when using antd 4.0. Read the following documents for specific changes
-❯ https://next.ant.design/docs/react/migration-v4-cn
-❯   
 ❯ 🚚 clone success
 ❯ [Sylvanas] Prepare js environment...
 ❯ [JS] Clean up...

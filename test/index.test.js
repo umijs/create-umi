@@ -25,6 +25,7 @@ describe('test umi-create', () => {
       .write('\n')
       .writeKey('DOWN', 'ENTER')
       .write('\n')
+      .write('\n')
       .end();
 
     expect(winEOL(response.stdout).replace(/>/g, '❯')).toMatchSnapshot();
@@ -46,6 +47,7 @@ describe('test umi-create', () => {
     })
       .beforeScript(path.join(fixtures, 'mock_cnpmjs.js'))
       .waitForPrompt()
+      .write('\n')
       .write('\n')
       .write('\n')
       .write('\n')
@@ -75,11 +77,38 @@ describe('typescript', () => {
       .write('\n')
       .write('\n')
       .write('\n')
+      .write('\n')
       .end();
 
     expect(response.code).toBe(0);
     expect(fs.existsSync(path.join(temp, 'jsconfig.json'))).toBeTruthy();
     expect(fs.existsSync(path.join(temp, 'tsconfig.json'))).toBeTruthy();
     expect(fs.existsSync(path.join(temp, 'package.json'))).toBeTruthy();
+  });
+
+  describe('all-blocks', () => {
+    it('tsconfig.json should be removed if JavaScript is picked', async () => {
+      let temp = fs.mkdtempSync(path.join(os.tmpdir(), `umi-create`));
+      if (os.platform() === 'darwin') {
+        temp = path.join('/private', temp);
+      }
+      const Coffee = coffee.Coffee;
+      const fixtures = path.join(__dirname, 'fixtures');
+      const response = await new Coffee({
+        method: 'fork',
+        cmd: path.join(__dirname, '../cli.js'),
+        opt: { cwd: temp },
+      })
+        .beforeScript(path.join(fixtures, 'mock_github.js'))
+        .waitForPrompt()
+        .write('\n')
+        .write('\n')
+        .writeKey('DOWN', 'ENTER')
+        .write('\n')
+        .end();
+
+      expect(response.code).toBe(0);
+      expect(fs.existsSync(path.join(temp, '/src/pages/exception/403/index.tsx'))).toBeTruthy();
+    });
   });
 });

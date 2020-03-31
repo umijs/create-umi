@@ -38,6 +38,7 @@
     "semver": "^6.1.0",
     "sort-package-json": "^1.22.1",
     "sylvanas": "^0.4.0",
+    "typescript": "^3.8.3",
     "umi-utils": "^1.5.2",
     "yargs-parser": "^13.1.1",
     "yeoman-environment": "^2.8.0",

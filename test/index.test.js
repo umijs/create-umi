@@ -87,6 +87,32 @@ describe('typescript', () => {
   });
 
   describe('all-blocks', () => {
+    it('get all blocks files', async () => {
+      let temp = fs.mkdtempSync(path.join(os.tmpdir(), `umi-create`));
+      if (os.platform() === 'darwin') {
+        temp = path.join('/private', temp);
+      }
+      const Coffee = coffee.Coffee;
+      const fixtures = path.join(__dirname, 'fixtures');
+      const response = await new Coffee({
+        method: 'fork',
+        cmd: path.join(__dirname, '../cli.js'),
+        opt: { cwd: temp },
+      })
+        .beforeScript(path.join(fixtures, 'mock_github.js'))
+        .waitForPrompt()
+        .write('\n')
+        // ts
+        .write('\n')
+        // all-blocks
+        .writeKey('DOWN', 'ENTER')
+        .write('\n')
+        .end();
+
+      expect(response.code).toBe(0);
+      expect(fs.existsSync(path.join(temp, '/src/pages/exception/403/index.tsx'))).toBeTruthy();
+    });
+
     it('tsconfig.json should be removed if JavaScript is picked', async () => {
       let temp = fs.mkdtempSync(path.join(os.tmpdir(), `umi-create`));
       if (os.platform() === 'darwin') {
@@ -102,13 +128,16 @@ describe('typescript', () => {
         .beforeScript(path.join(fixtures, 'mock_github.js'))
         .waitForPrompt()
         .write('\n')
-        .write('\n')
+        // js
+        .writeKey('DOWN', 'ENTER')
+        // all blocks
         .writeKey('DOWN', 'ENTER')
         .write('\n')
         .end();
-
+      console.log(temp);
       expect(response.code).toBe(0);
-      expect(fs.existsSync(path.join(temp, '/src/pages/exception/403/index.tsx'))).toBeTruthy();
+      expect(fs.existsSync(path.join(temp, 'tsconfig.json'))).toBeFalsy();
+      expect(fs.existsSync(path.join(temp, '/src/pages/exception/403/index.jsx'))).toBeTruthy();
     });
   });
 });

@@ -28,6 +28,7 @@ describe('test umi-create', () => {
       .write('\n')
       .end();
 
+    temp = path.join(temp, 'umiapp');
     expect(winEOL(response.stdout).replace(/>/g, '❯')).toMatchSnapshot();
     expect(response.code).toBe(0);
     expect(fs.existsSync(path.join(temp, 'package.json'))).toBeTruthy();
@@ -53,6 +54,7 @@ describe('test umi-create', () => {
       .write('\n')
       .end();
 
+    temp = path.join(temp, 'umiapp');
     expect(winEOL(response.stdout).replace(/>/g, '❯')).toMatchSnapshot();
     expect(response.code).toBe(0);
     expect(fs.existsSync(path.join(temp, 'package.json'))).toBeTruthy();
@@ -80,6 +82,7 @@ describe('typescript', () => {
       .write('\n')
       .end();
 
+    temp = path.join(temp, 'umiapp');
     expect(response.code).toBe(0);
     expect(fs.existsSync(path.join(temp, 'jsconfig.json'))).toBeTruthy();
     expect(fs.existsSync(path.join(temp, 'tsconfig.json'))).toBeTruthy();
@@ -108,7 +111,7 @@ describe('typescript', () => {
         .writeKey('DOWN', 'ENTER')
         .write('\n')
         .end();
-
+      temp = path.join(temp, 'umiapp');
       expect(response.code).toBe(0);
       expect(fs.existsSync(path.join(temp, '/src/pages/exception/403/index.tsx'))).toBeTruthy();
     });
@@ -134,7 +137,8 @@ describe('typescript', () => {
         .writeKey('DOWN', 'ENTER')
         .write('\n')
         .end();
-      console.log(temp);
+
+      temp = path.join(temp, 'umiapp');
       expect(response.code).toBe(0);
       expect(fs.existsSync(path.join(temp, 'tsconfig.json'))).toBeFalsy();
       expect(fs.existsSync(path.join(temp, '/src/pages/exception/403/index.jsx'))).toBeTruthy();

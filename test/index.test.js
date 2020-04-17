@@ -8,7 +8,7 @@ describe('test umi-create', () => {
   beforeAll(() => {
     process.env.TEST = 'test';
   });
-  fit('test generate antd pro project from github', async () => {
+  it('test generate antd pro project from github', async () => {
     let temp = fs.mkdtempSync(path.join(os.tmpdir(), `umi-create`));
     if (os.platform() === 'darwin') {
       temp = path.join('/private', temp);

@@ -16,6 +16,9 @@ exports[`test umi-create test generate antd pro project from gitee.org 1`] = `
 ❯ simple 
   complete [11D[11C[2K[1A[2K[1A[2K[G? 🚀 Do you need all the blocks or a simple scaffold? simple[60D[60C
 ? 🦄 Time to use better, faster and latest antd@4! (Y/n) [57D[57C[2K[G? 🦄 Time to use better, faster and latest antd@4! Yes[54D[54C
+❯ 🚚 clone success
+❯ Clean up...
+✨ File Generate Done
 "
 `;
 

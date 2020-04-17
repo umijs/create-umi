@@ -134,7 +134,7 @@ describe('typescript', () => {
         .writeKey('DOWN', 'ENTER')
         .write('\n')
         .end();
-      console.log(temp);
+
       expect(response.code).toBe(0);
       expect(fs.existsSync(path.join(temp, 'tsconfig.json'))).toBeFalsy();
       expect(fs.existsSync(path.join(temp, '/src/pages/exception/403/index.jsx'))).toBeTruthy();

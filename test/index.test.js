@@ -8,7 +8,7 @@ describe('test umi-create', () => {
   beforeAll(() => {
     process.env.TEST = 'test';
   });
-  it('test generate antd pro project from github', async () => {
+  fit('test generate antd pro project from github', async () => {
     let temp = fs.mkdtempSync(path.join(os.tmpdir(), `umi-create`));
     if (os.platform() === 'darwin') {
       temp = path.join('/private', temp);
@@ -134,7 +134,7 @@ describe('typescript', () => {
         .writeKey('DOWN', 'ENTER')
         .write('\n')
         .end();
-      console.log(temp);
+
       expect(response.code).toBe(0);
       expect(fs.existsSync(path.join(temp, 'tsconfig.json'))).toBeFalsy();
       expect(fs.existsSync(path.join(temp, '/src/pages/exception/403/index.jsx'))).toBeTruthy();

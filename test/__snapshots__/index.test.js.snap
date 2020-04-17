@@ -11,14 +11,11 @@ exports[`test umi-create test generate antd pro project from gitee.org 1`] = `
   plugin          - Create a umi plugin. [41D[41C[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G? Select the boilerplate type ant-design-pro[44D[44C
 ? 🤓 Which language do you want to use? (Use arrow keys)
 ❯ TypeScript 
-  JavaScript [13D[13C[2K[1A[2K[1A[2K[G? 🤓 Which language do you want to use? TypeScript[49D[50C
+  JavaScript [13D[13C[2K[1A[2K[1A[2K[G? 🤓 Which language do you want to use? TypeScript[50D[50C
 ? 🚀 Do you need all the blocks or a simple scaffold? (Use arrow keys)
 ❯ simple 
-  complete [11D[11C[2K[1A[2K[1A[2K[G? 🚀 Do you need all the blocks or a simple scaffold? simple[59D[60C
-? 🦄 Time to use better, faster and latest antd@4! (Y/n) [56D[57C[2K[G? 🦄 Time to use better, faster and latest antd@4! Yes[53D[54C
-❯ 🚚 clone success
-❯ Clean up...
-✨ File Generate Done
+  complete [11D[11C[2K[1A[2K[1A[2K[G? 🚀 Do you need all the blocks or a simple scaffold? simple[60D[60C
+? 🦄 Time to use better, faster and latest antd@4! (Y/n) [57D[57C[2K[G? 🦄 Time to use better, faster and latest antd@4! Yes[54D[54C
 "
 `;
 
@@ -35,11 +32,11 @@ exports[`test umi-create test generate antd pro project from github 1`] = `
 ❯ TypeScript 
   JavaScript [13D[13C[2K[1A[2K[1A[2K[G? 🤓 Which language do you want to use? 
   TypeScript 
-❯ JavaScript [13D[13C[2K[1A[2K[1A[2K[G? 🤓 Which language do you want to use? JavaScript[49D[50C
+❯ JavaScript [13D[13C[2K[1A[2K[1A[2K[G? 🤓 Which language do you want to use? JavaScript[50D[50C
 ? 🚀 Do you need all the blocks or a simple scaffold? (Use arrow keys)
 ❯ simple 
-  complete [11D[11C[2K[1A[2K[1A[2K[G? 🚀 Do you need all the blocks or a simple scaffold? simple[59D[60C
-? 🦄 Time to use better, faster and latest antd@4! (Y/n) [56D[57C[2K[G? 🦄 Time to use better, faster and latest antd@4! Yes[53D[54C
+  complete [11D[11C[2K[1A[2K[1A[2K[G? 🚀 Do you need all the blocks or a simple scaffold? simple[60D[60C
+? 🦄 Time to use better, faster and latest antd@4! (Y/n) [57D[57C[2K[G? 🦄 Time to use better, faster and latest antd@4! Yes[54D[54C
 ❯ 🚚 clone success
 ❯ [Sylvanas] Prepare js environment...
 ❯ [JS] Clean up...

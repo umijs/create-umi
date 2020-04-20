@@ -23,6 +23,8 @@ describe('test umi-create', () => {
       .beforeScript(path.join(fixtures, 'mock_github.js'))
       .waitForPrompt()
       .write('\n')
+      .write('\n')
+      .write('\n')
       .writeKey('DOWN', 'ENTER')
       .write('\n')
       .write('\n')
@@ -47,6 +49,8 @@ describe('test umi-create', () => {
     })
       .beforeScript(path.join(fixtures, 'mock_cnpmjs.js'))
       .waitForPrompt()
+      .write('\n')
+      .write('\n')
       .write('\n')
       .write('\n')
       .write('\n')
@@ -78,6 +82,9 @@ describe('typescript', () => {
       .write('\n')
       .write('\n')
       .write('\n')
+      .write('\n')
+      .write('\n')
+      .write('\n')
       .end();
 
     expect(response.code).toBe(0);
@@ -102,13 +109,14 @@ describe('typescript', () => {
         .beforeScript(path.join(fixtures, 'mock_github.js'))
         .waitForPrompt()
         .write('\n')
+        .write('\n')
+        .write('\n')
         // ts
         .write('\n')
         // all-blocks
         .writeKey('DOWN', 'ENTER')
         .write('\n')
         .end();
-
       expect(response.code).toBe(0);
       expect(fs.existsSync(path.join(temp, '/src/pages/exception/403/index.tsx'))).toBeTruthy();
     });
@@ -127,14 +135,18 @@ describe('typescript', () => {
       })
         .beforeScript(path.join(fixtures, 'mock_github.js'))
         .waitForPrompt()
-        .write('\n')
+        .writeKey('ENTER')
+        .writeKey('ENTER')
+        .writeKey('ENTER')
         // js
         .writeKey('DOWN', 'ENTER')
         // all blocks
         .writeKey('DOWN', 'ENTER')
-        .write('\n')
+        .writeKey('ENTER')
+        .writeKey('ENTER')
         .end();
-
+      console.log(response);
+      console.log(temp);
       expect(response.code).toBe(0);
       expect(fs.existsSync(path.join(temp, 'tsconfig.json'))).toBeFalsy();
       expect(fs.existsSync(path.join(temp, '/src/pages/exception/403/index.jsx'))).toBeTruthy();

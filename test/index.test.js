@@ -84,6 +84,7 @@ describe('typescript', () => {
       .write('\n')
       .write('\n')
       .write('\n')
+      .write('\n')
       .end();
 
     expect(response.code).toBe(0);
@@ -136,6 +137,7 @@ describe('typescript', () => {
         .waitForPrompt()
         .writeKey('ENTER')
         .writeKey('ENTER')
+        .writeKey('ENTER')
         // js
         .writeKey('DOWN', 'ENTER')
         // all blocks
@@ -143,7 +145,8 @@ describe('typescript', () => {
         .writeKey('ENTER')
         .writeKey('ENTER')
         .end();
-
+      console.log(response);
+      console.log(temp);
       expect(response.code).toBe(0);
       expect(fs.existsSync(path.join(temp, 'tsconfig.json'))).toBeFalsy();
       expect(fs.existsSync(path.join(temp, '/src/pages/exception/403/index.jsx'))).toBeTruthy();

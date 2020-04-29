@@ -1,48 +1,66 @@
 {
   "name": "<%= name %>",
-  "version": "0.0.1",
+  "main": "lib/index.js",
   "description": "<%= description %>",
   "authors": {
     "name": "<%= author %>",
     "email": "<%= mail %>"
   },
   "repository": "<%= org %>/<%= name %>",
-  "peerDependencies": {
-<% if (withUmiUI) { -%>
-    "antd": "4.x",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-<% } -%>
-    "umi": "2.x || ^2.9.0-0"
-  },
-  "main":  "lib/index.js",
   "scripts": {
-<% if (withUmiUI) { -%>
-    "start:mini": "cross-env UMI_UI=1 APP_ROOT=example umi dev",
-    "start": "cross-env CURRENT_PROJECT=example umi ui",
-<% } else { -%>
     "start": "cross-env APP_ROOT=example umi dev",
-<% } -%>
-    "build":  "father-build",
-    "prepublishOnly": "npm run build && np --no-cleanup --yolo --no-publish"
+    "build": "father-build",
+    "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage",
+    "test:update": "umi-test --updateSnapshot"
+  },
+  "lint-staged": {
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write",
+      "git add"
+    ],
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "devDependencies": {
-    "cross-env": "^6.0.3",
-    "father-build":  "^1.8.0",
+    "@testing-library/react": "^9.4.0",
+    "@testing-library/react-hooks": "^3.2.1",
+    "@types/jest": "^25.1.3",
+    "@types/node": "^13.7.7",
 <% if (withUmiUI) { -%>
-    "antd": "^4.0.0-alpha.0",
+    "@umijs/preset-ui": "^2.1.13",
 <% } -%>
-    "np": "^5.0.3",
-    "umi": "^2.9.0",
-    "umi-types": ">= 0.4.0-beta.4"
+    "@umijs/test": "^3.0.10",
+    "@umijs/test-utils": "^1.0.0",
+    "body-parser": "^1.18.2",
+    "cross-env": "^6.0.3",
+    "express": "^4.15.3",
+    "father-build": "^1.17.2",
+    "lerna": "^3.20.2",
+    "lint-staged": "^10.0.8",
+    "npm-run-all": "^4.1.5",
+    "pify": "^5.0.0",
+    "prettier": "^1.19.1",
+    "puppeteer": "^1.20.0",
+    "query-string": "^6.11.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-test-renderer": "^16.9.0",
+    "test-umi-plugin": "^0.1.0",
+    "umi": "^3.1.0",
+    "yorkie": "^2.0.0"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged",
+    "commit-msg": "node scripts/verifyCommit.js"
   },
   "files": [
 <% if (withUmiUI) { -%>
     "dist",
 <% } -%>
-    "lib",
-    "src",
-    "ui"
-  ],
-  "license": "MIT"
+    "lib"
+  ]
 }

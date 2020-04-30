@@ -10,7 +10,7 @@ export default (api) => {
           type="primary"
           onClick={async () => {
             const { data } = await callRemote({
-              type: 'org.<%= author %>.<%= name %>.test',
+              type: 'org.xiaohuoni.demo.test',
             });
             alert(data);
           }}
@@ -20,8 +20,8 @@ export default (api) => {
   }
 
   api.addPanel({
-    title: '<%= name %>',
-    path: '/<%= name %>',
+    title: 'demo',
+    path: '/demo',
     icon: 'home',
     component: PluginPanel,
   });

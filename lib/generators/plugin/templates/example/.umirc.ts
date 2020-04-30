@@ -1,11 +1,8 @@
-import { join } from 'path';
-import { IConfig } from 'umi-types';
+import { defineConfig } from 'umi';
 
-export default {
-  routes: [
-    { path: '/', component: './index' },
-  ],
-  plugins: [
-    join(__dirname, '..', require('../package').main || 'index.js'),
-  ],
-} as IConfig;
+export default defineConfig({
+<% if (withUmiUI) { -%>
+  presets: [require.resolve('@umijs/preset-ui')],
+<% } -%>
+  plugins: [require.resolve('../lib')],
+});

@@ -1,23 +1,29 @@
 // ref:
-// - https://umijs.org/plugin/develop.html
-import { IApi } from 'umi-types';
+// - https://umijs.org/plugins/api
+<% if (withUmiUI) { -%>
+import { join } from 'path';
+<% } -%>
+import { IApi } from '@umijs/types';
 
-export default function (api: IApi, options) {
+export default function (api: IApi) {
+  api.logger.info('use plugin');
 
-  // Example: output the webpack config
-  api.chainWebpackConfig(config => {
-    // console.log(config.toString());
+  api.modifyHTML(($) => {
+    $('body').prepend(`<h1>hello umi plugin</h1>`);
+    return $;
   });
 
 <% if (withUmiUI) { -%>
-  api.addUIPlugin(require.resolve('../dist/index.umd'));
+  // @ts-ignore
+  api.addUIPlugin(() => join(__dirname, '../dist/index.umd.js'));
 
+  // @ts-ignore
   api.onUISocket(({ action, failure, success }) => {
-    if (action.type === 'org.<%= author %>.<%= name %>.test') {
+    if (action.type === 'org.xiaohuoni.demo.test') {
       success({
-        data: '<%= name %>.test',
+        data: 'demo.test',
       });
     }
   });
-<% } %>
+<% } -%>
 }

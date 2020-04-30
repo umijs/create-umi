@@ -1,5 +1,5 @@
 import { Button } from 'antd';
-import { IUiApi } from 'umi-types'
+import { IUiApi } from '@umijs/ui-types';
 
 export default (api: IUiApi) => {
   const { callRemote } = api;
@@ -11,7 +11,7 @@ export default (api: IUiApi) => {
           type="primary"
           onClick={async () => {
             const { data } = await callRemote({
-              type: 'org.<%= author %>.<%= name %>.test',
+              type: 'org.xiaohuoni.demo.test',
             });
             alert(data);
           }}
@@ -21,8 +21,8 @@ export default (api: IUiApi) => {
   }
 
   api.addPanel({
-    title: '<%= name %>',
-    path: '/<%= name %>',
+    title: 'demo',
+    path: '/demo',
     icon: 'home',
     component: PluginPanel,
   });

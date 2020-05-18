@@ -9,12 +9,15 @@ exports[`test umi-create test generate antd pro project from gitee.org 1`] = `
   block           - Create a umi block. 
   library         - Create a library with umi. 
   plugin          - Create a umi plugin. [41D[41C[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G? Select the boilerplate type ant-design-pro[44D[44C
+? 🧙 Be the first to experience the new umi@3 ? (y/N) [54D[54C[2K[G? 🧙 Be the first to experience the new umi@3 ? No[50D[50C
+
 ? 🤓 Which language do you want to use? (Use arrow keys)
 ❯ TypeScript 
   JavaScript [13D[13C[2K[1A[2K[1A[2K[G? 🤓 Which language do you want to use? TypeScript[50D[50C
 ? 🚀 Do you need all the blocks or a simple scaffold? (Use arrow keys)
 ❯ simple 
   complete [11D[11C[2K[1A[2K[1A[2K[G? 🚀 Do you need all the blocks or a simple scaffold? simple[60D[60C
+false
 ? 🦄 Time to use better, faster and latest antd@4! (Y/n) [57D[57C[2K[G? 🦄 Time to use better, faster and latest antd@4! Yes[54D[54C
 ❯ 🚚 clone success
 ❯ Clean up...
@@ -31,6 +34,8 @@ exports[`test umi-create test generate antd pro project from github 1`] = `
   block           - Create a umi block. 
   library         - Create a library with umi. 
   plugin          - Create a umi plugin. [41D[41C[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G? Select the boilerplate type ant-design-pro[44D[44C
+? 🧙 Be the first to experience the new umi@3 ? (y/N) [54D[54C[2K[G? 🧙 Be the first to experience the new umi@3 ? No[50D[50C
+
 ? 🤓 Which language do you want to use? (Use arrow keys)
 ❯ TypeScript 
   JavaScript [13D[13C[2K[1A[2K[1A[2K[G? 🤓 Which language do you want to use? 
@@ -39,6 +44,7 @@ exports[`test umi-create test generate antd pro project from github 1`] = `
 ? 🚀 Do you need all the blocks or a simple scaffold? (Use arrow keys)
 ❯ simple 
   complete [11D[11C[2K[1A[2K[1A[2K[G? 🚀 Do you need all the blocks or a simple scaffold? simple[60D[60C
+false
 ? 🦄 Time to use better, faster and latest antd@4! (Y/n) [57D[57C[2K[G? 🦄 Time to use better, faster and latest antd@4! Yes[54D[54C
 ❯ 🚚 clone success
 ❯ [Sylvanas] Prepare js environment...

@@ -6,9 +6,7 @@ exports[`test umi-create test generate antd pro project from gitee.org 1`] = `
 , use together with umi block. 
   app             - Create project with a simple boilerplate, support typescript
 . 
-  block           - Create a umi block. 
-  library         - Create a library with umi. 
-  plugin          - Create a umi plugin. [41D[41C[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G? Select the boilerplate type ant-design-pro[44D[44C
+  plugin          - Create a umi plugin. [41D[41C[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G? Select the boilerplate type ant-design-pro[44D[44C
 ? 🧙 Be the first to experience the new umi@3 ? (Use arrow keys)
   Pro V5 
 ❯ Pro V4 [9D[9C[2K[1A[2K[1A[2K[G? 🧙 Be the first to experience the new umi@3 ? Pro V4[54D[54C
@@ -33,9 +31,7 @@ exports[`test umi-create test generate antd pro project from github 1`] = `
 , use together with umi block. 
   app             - Create project with a simple boilerplate, support typescript
 . 
-  block           - Create a umi block. 
-  library         - Create a library with umi. 
-  plugin          - Create a umi plugin. [41D[41C[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G? Select the boilerplate type ant-design-pro[44D[44C
+  plugin          - Create a umi plugin. [41D[41C[2K[1A[2K[1A[2K[1A[2K[1A[2K[1A[2K[G? Select the boilerplate type ant-design-pro[44D[44C
 ? 🧙 Be the first to experience the new umi@3 ? (Use arrow keys)
   Pro V5 
 ❯ Pro V4 [9D[9C[2K[1A[2K[1A[2K[G? 🧙 Be the first to experience the new umi@3 ? Pro V4[54D[54C

@@ -17,17 +17,17 @@
     "dva": "^2.6.0-beta.6",
 <% } -%>
 <% if (reactFeatures.includes('antd')) { -%>
-    "antd": "^3.19.5",
+    "antd": "^4.15.1",
 <% } -%>
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
   },
   "devDependencies": {
 <% if (isTypeScript) { -%>
     "@types/jest": "^23.3.12",
-    "@types/react": "^16.7.18",
-    "@types/react-dom": "^16.0.11",
-    "@types/react-test-renderer": "^16.0.3",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-test-renderer": "^17.0.0",
 <% } -%>
     "babel-eslint": "^9.0.0",
     "eslint": "^5.4.0",

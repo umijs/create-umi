@@ -136,8 +136,6 @@ describe('typescript', () => {
         .beforeScript(path.join(fixtures, 'mock_github.js'))
         .waitForPrompt()
         .writeKey('ENTER')
-        .writeKey('ENTER')
-        .writeKey('ENTER')
         // js
         .writeKey('DOWN', 'ENTER')
         // all blocks
